@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Functions &#8212; Introduction to Linear Systems</title>
+    <title>Chapter 1: Linear Algebra &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -59,13 +59,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-linear-algebra/01-functions-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-linear-algebra/00-intro-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Fields and Vector Spaces" href="02-fields-and-vector-spaces-eng.html" />
-    <link rel="prev" title="Chapter 1: Linear Algebra" href="00-intro-eng.html" />
+    <link rel="next" title="1. Functions" href="01-functions-eng.html" />
+    <link rel="prev" title="Hệ thống tuyến tính cơ bản" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Linear Algebra</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1. Functions</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chapter 1: Linear Algebra</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-functions-eng.html">1. Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
 </ul>
 </li>
@@ -233,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-linear-algebra/01-functions-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-linear-algebra/00-intro-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -263,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap1-linear-algebra/01-functions-eng.md" target="_blank"
+      <li><a href="../_sources/chap1-linear-algebra/00-intro-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,9 +330,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -345,20 +341,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1. Functions</h1>
+    <h1>Chapter 1: Linear Algebra</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-function">What is a function?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-functions">Properties of functions</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -368,42 +355,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="functions">
-<h1>1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h1>
-<div class="section" id="what-is-a-function">
-<h2>What is a function?<a class="headerlink" href="#what-is-a-function" title="Permalink to this headline">#</a></h2>
-<p>Define 2 sets of elements, we define function as a mapping of elements from 1 set into another set.</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal{f}:X \rightarrow Y
-\]</div>
-<p>We say this as <em><span class="math notranslate nohighlight">\(f\)</span> maps <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span></em>. <span class="math notranslate nohighlight">\(X\)</span> is called the <strong>domain</strong> of f, and Y is called the <strong>co-domain</strong> of f. The set <span class="math notranslate nohighlight">\(f(X)\)</span> is called the <strong>range</strong> of f.</p>
-<p>We can define mathematically the range of <span class="math notranslate nohighlight">\(f\)</span>,i.e. <span class="math notranslate nohighlight">\(f(X)\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[
-f(X) = \{f(x) | x \in X\}
-\]</div>
-<p>Couple of things to remember:</p>
-<ul class="simple">
-<li><p>In general, the range of <span class="math notranslate nohighlight">\(f\)</span> does not equal to the co-domain of <span class="math notranslate nohighlight">\(f\)</span>. That’s why we say it as <span class="math notranslate nohighlight">\(f\)</span> maps <span class="math notranslate nohighlight">\(X\)</span> <strong>into</strong> <span class="math notranslate nohighlight">\(Y\)</span>.</p></li>
-<li><p>However, by defition, <span class="math notranslate nohighlight">\(f\)</span> will be called a function if for all elements <span class="math notranslate nohighlight">\(x \in X\)</span>, there exists a <strong>unique</strong> value <span class="math notranslate nohighlight">\(f(x)\)</span>,i.e. the function assigns a unique value <span class="math notranslate nohighlight">\(f(x) \forall x \in X\)</span>.</p></li>
-</ul>
-</div>
-<div class="section" id="properties-of-functions">
-<h2>Properties of functions<a class="headerlink" href="#properties-of-functions" title="Permalink to this headline">#</a></h2>
-<p>There are 3 properties: injective, surjective and bijective.</p>
-<p><strong>Injective</strong>: A function is called injective (“one-to-one”) iff</p>
-<div class="math notranslate nohighlight">
-\[f(x_1) = f(x_2) \leftrightarrow x_1 = x_2\]</div>
-<p>This means that an element in <span class="math notranslate nohighlight">\(Y\)</span> cannot be a mapping of more than 1 element in <span class="math notranslate nohighlight">\(X\)</span>. Equivalently, <span class="math notranslate nohighlight">\(x_1 \neq x_2 \leftrightarrow f(x_1) \neq f(x_2)\)</span>.</p>
-<p><strong>Surjective</strong>: A function is called surjective (“onto”) iff</p>
-<div class="math notranslate nohighlight">
-\[\forall y \in Y, \exists x \in X \ni y = f(x)\]</div>
-<p>This means that every element in <span class="math notranslate nohighlight">\(Y\)</span> is a result of the mapping from <span class="math notranslate nohighlight">\(X\)</span> through <span class="math notranslate nohighlight">\(f\)</span>. We can think of this as <em>the range of <span class="math notranslate nohighlight">\(f\)</span> expands the entire co-domain</em>.</p>
-<p><strong>Bijective</strong>: A function is called bijective if it is both surjective and injective.</p>
-<div class="math notranslate nohighlight">
-\[\forall y \in Y, \exists! x \in X \ni y = f(x)\]</div>
-<p>Injectivity comes in at the <span class="math notranslate nohighlight">\(\exists!\)</span>,i.e. a unique mapping.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="chapter-1-linear-algebra">
+<h1>Chapter 1: Linear Algebra<a class="headerlink" href="#chapter-1-linear-algebra" title="Permalink to this headline">#</a></h1>
+<p>This chapter discusses important concepts and methods in linear algebra that are frequently used and referred to throughout the rest of the book. The topic aims to go through things from the ground up, and requires no pre-requisite from the readers, except for basic calculus.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -436,20 +391,20 @@ f(X) = \{f(x) | x \in X\}
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="00-intro-eng.html"
+       href="../intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Chapter 1: Linear Algebra</p>
+        <p class="prev-next-title">Hệ thống tuyến tính cơ bản</p>
       </div>
     </a>
     <a class="right-next"
-       href="02-fields-and-vector-spaces-eng.html"
+       href="01-functions-eng.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2. Fields and Vector Spaces</p>
+        <p class="prev-next-title">1. Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -459,21 +414,6 @@ f(X) = \{f(x) | x \in X\}
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-function">What is a function?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-functions">Properties of functions</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
