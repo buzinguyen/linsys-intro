@@ -7,3 +7,4 @@ parts:
   - caption: I. Linear Algebra
     chapters:
     - file: chap1-linear-algebra/01-functions-eng
+    - file: chap1-linear-algebra/02-fields-and-vector-spaces-eng
