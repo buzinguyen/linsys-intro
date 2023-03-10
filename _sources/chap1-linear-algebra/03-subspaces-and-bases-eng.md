@@ -62,4 +62,3 @@ You can have an infinite number of basis for a vector space. However, the number
 ```{note}
 Once you have chosen the basis, the set of coordinates is unique for that basis. This means that given a basis, any vector in the space is uniquely defined by its coordinate.
 ```
-
