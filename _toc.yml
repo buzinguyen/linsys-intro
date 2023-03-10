@@ -3,8 +3,7 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: chap1-linear-algebra/linear-algebra-0
-- file: archive/markdown
-- file: archive/notebooks
-- file: archive/markdown-notebooks
+parts:
+  - caption: I. Linear Algebra
+    chapters:
+    - file: chap1-linear-algebra/01-functions-eng
