@@ -1,6 +1,6 @@
 # Hệ thống tuyến tính cơ bản
 ## Giới thiệu
-Cuốn sách này tổng hợp những trải nghiệm và kiến thức trong nghiên cứu của tác giả trong quá trình học tập và nghiên cứu của tác giả tại đại học Princeton. Cuốn sách được cấu trúc từ cơ bản đến nâng cao, bắt đầu từ đại số tuyến tính (linear algebra), đến các lý thuyết cơ bản của hệ thống tuyến tính (linear system theory), các ứng dụng của hệ thống tuyến tính trong hệ thống robot và điều khiển, cuối cùng là các ứng dụng của hệ thống tuyến tính trong hệ thống điều khiển, lý thuyết trò chơi, và các ứng dụng khác trong hệ thống máy học, trí tuệ nhân tạo. 
+Cuốn sách này tổng hợp những trải nghiệm và kiến thức trong nghiên cứu của tác giả trong quá trình học tập và nghiên cứu tại đại học Princeton. Cuốn sách được cấu trúc từ cơ bản đến nâng cao, bắt đầu từ đại số tuyến tính (linear algebra), đến các lý thuyết cơ bản của hệ thống tuyến tính (linear system theory), các ứng dụng của hệ thống tuyến tính trong hệ thống robot và điều khiển, cuối cùng là các ứng dụng của hệ thống tuyến tính trong lý thuyết trò chơi, và các ứng dụng khác trong hệ thống máy học, trí tuệ nhân tạo. 
 
 Đối với các phần toán ứng dụng, sách sẽ có hỗ trợ source code đính kèm bằng ngôn ngữ Python chạy bằng Jupyter Notebook. Người đọc có thể chạy code interative ngay trên sách, hoặc tải notebook từ repo của sách.
 
