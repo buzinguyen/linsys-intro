@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giới thiệu &#8212; Introduction to Linear Systems</title>
+    <title>Hệ thống tuyến tính cơ bản &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -149,13 +149,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Giới thiệu
+                    Hệ thống tuyến tính cơ bản
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear Algebra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chap1-linear-algebra/01-functions-eng.html">1. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap1-linear-algebra/02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
 </ul>
 
     </div>
@@ -326,7 +327,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -337,11 +340,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Giới thiệu</h1>
+    <h1>Hệ thống tuyến tính cơ bản</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gioi-thieu">Giới thiệu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#muc-luc">Mục lục</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tai-lieu-tham-khao">Tài liệu tham khảo</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -351,17 +364,66 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="gioi-thieu">
-<h1>Giới thiệu<a class="headerlink" href="#gioi-thieu" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="he-thong-tuyen-tinh-co-ban">
+<h1>Hệ thống tuyến tính cơ bản<a class="headerlink" href="#he-thong-tuyen-tinh-co-ban" title="Permalink to this headline">#</a></h1>
+<div class="section" id="gioi-thieu">
+<h2>Giới thiệu<a class="headerlink" href="#gioi-thieu" title="Permalink to this headline">#</a></h2>
 <p>Cuốn sách này tổng hợp những trải nghiệm và kiến thức trong nghiên cứu của tác giả trong quá trình học tập và nghiên cứu của tác giả tại đại học Princeton. Cuốn sách được cấu trúc từ cơ bản đến nâng cao, bắt đầu từ đại số tuyến tính (linear algebra), đến các lý thuyết cơ bản của hệ thống tuyến tính (linear system theory), cuối cùng là các ứng dụng của hệ thống tuyến tính trong hệ thống điều khiển, lý thuyết trò chơi, và các ứng dụng khác trong hệ thống máy học, trí tuệ nhân tạo.</p>
 <p>Cuốn sách sẽ có 2 phiên bản tiếng Anh và tiếng Việt. Do các điều kiện về công việc và nghiên cứu, phiên bản tiếng Anh sẽ được hoàn thiện trước, và phiên bản tiếng Việt sẽ được hoàn thiện sau với sự hỗ trợ dịch thuật từ cộng đồng.</p>
 <p>Cuốn sách sẽ được mở mã nguồn hoàn toàn tại <a class="reference external" href="https://github.com/buzinguyen/linsys-intro">repo của sách</a>. Bạn cũng có thể xem bản online được cập nhật thường xuyên của sách tại <a class="reference external" href="https://www.buzinguyen.com/linsys-intro/intro.html">đây</a>.</p>
 <p>Cuốn sách vẫn đang trong quá trình phát triển và cập nhật. Mọi thắc mắc và yêu cầu chỉnh sửa xin gửi về <a class="reference external" href="mailto:duyn&#37;&#52;&#48;princeton&#46;edu">duyn<span>&#64;</span>princeton<span>&#46;</span>edu</a>. Xin cảm ơn các bạn đã quan tâm.</p>
+</div>
+<div class="section" id="muc-luc">
+<h2>Mục lục<a class="headerlink" href="#muc-luc" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear Algebra</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="chap1-linear-algebra/01-functions-eng.html">1. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap1-linear-algebra/02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
 </ul>
+</div>
+</div>
+<div class="section" id="tai-lieu-tham-khao">
+<h2>Tài liệu tham khảo<a class="headerlink" href="#tai-lieu-tham-khao" title="Permalink to this headline">#</a></h2>
+<p>Cuốn sách này được dựa trên rất nhiều nguồn tài liệu tham khảo, được đúc kết, tham lược và rút gọn theo cách hiểu và sử dụng của tác giả. Danh sách những cuốn sách sẽ được sử dụng nhiều nhất bao gồm:</p>
+<ul class="simple">
+<li><p>Hệ thống tuyến tính</p>
+<ul>
+<li><p>Linear Systems Theory: Second Edition của Joao Hespanha <span id="id1">[<a class="reference internal" href="#id8" title="J.P. Hespanha. Linear Systems Theory: Second Edition. Princeton University Press, 2018. ISBN 9780691179575. URL: https://books.google.com/books?id=O3OYDwAAQBAJ.">Hespanha, 2018</a>]</span></p></li>
+<li><p>Modern Control Theory của Brogan Williams <span id="id2">[<a class="reference internal" href="#id9" title="W.L. Brogan. Modern Control Theory. Prentice Hall, 1991. ISBN 9780135897638. URL: https://books.google.com/books?id=OPFQAAAAMAAJ.">Brogan, 1991</a>]</span></p></li>
+<li><p>Linear System Theory của Callier và Desoer <span id="id3">[<a class="reference internal" href="#id10" title="F.M. Callier and C.A. Desoer. Linear System Theory. Springer Texts in Electrical Engineering. Springer New York, 2012. ISBN 9781461209577. URL: https://books.google.com/books?id=9xTSBwAAQBAJ.">Callier and Desoer, 2012</a>]</span></p></li>
+</ul>
+</li>
+<li><p>Lý thuyết trò chơi</p>
+<ul>
+<li><p>Dynamic Noncooperative Game Theory, 2nd Edition của Tamer Basar <span id="id4">[<a class="reference internal" href="#id11" title="Tamer Başar and Geert Jan Olsder. Dynamic Noncooperative Game Theory, 2nd Edition. Society for Industrial and Applied Mathematics, edition, 1998. URL: https://epubs.siam.org/doi/abs/10.1137/1.9781611971132, arXiv:https://epubs.siam.org/doi/pdf/10.1137/1.9781611971132, doi:10.1137/1.9781611971132.">Başar and Olsder, 1998</a>]</span></p></li>
+<li><p>Differential Games: A Mathematical Theory with Applications to Warfare and Pursuit, Control and Optimization của Rufus Isaacs <span id="id5">[<a class="reference internal" href="#id12" title="R. Isaacs. Differential Games: A Mathematical Theory with Applications to Warfare and Pursuit, Control and Optimization. Dover books on mathematics. Dover Publications, 1999. ISBN 9780486406824. URL: https://books.google.com/books?id=XIxmMyIQgm0C.">Isaacs, 1999</a>]</span></p></li>
+<li><p>Noncooperative Game Theory: An Introduction for Engineers and Computer Scientists của Joao Hespanha <span id="id6">[<a class="reference internal" href="#id13" title="J.P. Hespanha. Noncooperative Game Theory: An Introduction for Engineers and Computer Scientists. Princeton University Press, 2017. ISBN 9780691175218. URL: https://books.google.com/books?id=N3GYDwAAQBAJ.">Hespanha, 2017</a>]</span></p></li>
+</ul>
+</li>
+</ul>
+<div class="docutils container" id="id7">
+<dl class="citation">
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">BO98</a></span></dt>
+<dd><p>Tamer Başar and Geert Jan Olsder. <em>Dynamic Noncooperative Game Theory, 2nd Edition</em>. Society for Industrial and Applied Mathematics, edition, 1998. URL: <a class="reference external" href="https://epubs.siam.org/doi/abs/10.1137/1.9781611971132">https://epubs.siam.org/doi/abs/10.1137/1.9781611971132</a>, <a class="reference external" href="https://arxiv.org/abs/https://epubs.siam.org/doi/pdf/10.1137/1.9781611971132">arXiv:https://epubs.siam.org/doi/pdf/10.1137/1.9781611971132</a>, <a class="reference external" href="https://doi.org/10.1137/1.9781611971132">doi:10.1137/1.9781611971132</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">Bro91</a></span></dt>
+<dd><p>W.L. Brogan. <em>Modern Control Theory</em>. Prentice Hall, 1991. ISBN 9780135897638. URL: <a class="reference external" href="https://books.google.com/books?id=OPFQAAAAMAAJ">https://books.google.com/books?id=OPFQAAAAMAAJ</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id3">CD12</a></span></dt>
+<dd><p>F.M. Callier and C.A. Desoer. <em>Linear System Theory</em>. Springer Texts in Electrical Engineering. Springer New York, 2012. ISBN 9781461209577. URL: <a class="reference external" href="https://books.google.com/books?id=9xTSBwAAQBAJ">https://books.google.com/books?id=9xTSBwAAQBAJ</a>.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id6">Hes17</a></span></dt>
+<dd><p>J.P. Hespanha. <em>Noncooperative Game Theory: An Introduction for Engineers and Computer Scientists</em>. Princeton University Press, 2017. ISBN 9780691175218. URL: <a class="reference external" href="https://books.google.com/books?id=N3GYDwAAQBAJ">https://books.google.com/books?id=N3GYDwAAQBAJ</a>.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">Hes18</a></span></dt>
+<dd><p>J.P. Hespanha. <em>Linear Systems Theory: Second Edition</em>. Princeton University Press, 2018. ISBN 9780691179575. URL: <a class="reference external" href="https://books.google.com/books?id=O3OYDwAAQBAJ">https://books.google.com/books?id=O3OYDwAAQBAJ</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id5">Isa99</a></span></dt>
+<dd><p>R. Isaacs. <em>Differential Games: A Mathematical Theory with Applications to Warfare and Pursuit, Control and Optimization</em>. Dover books on mathematics. Dover Publications, 1999. ISBN 9780486406824. URL: <a class="reference external" href="https://books.google.com/books?id=XIxmMyIQgm0C">https://books.google.com/books?id=XIxmMyIQgm0C</a>.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -408,6 +470,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gioi-thieu">Giới thiệu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#muc-luc">Mục lục</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tai-lieu-tham-khao">Tài liệu tham khảo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
