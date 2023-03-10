@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Fields and Vector Spaces &#8212; Introduction to Linear Systems</title>
+    <title>3. Subspaces and Bases &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -59,13 +59,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-linear-algebra/02-fields-and-vector-spaces-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-linear-algebra/03-subspaces-and-bases-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Subspaces and Bases" href="03-subspaces-and-bases-eng.html" />
-    <link rel="prev" title="1. Functions" href="01-functions-eng.html" />
+    <link rel="prev" title="2. Fields and Vector Spaces" href="02-fields-and-vector-spaces-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -160,8 +157,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Linear Algebra</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-functions-eng.html">1. Functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2. Fields and Vector Spaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-subspaces-and-bases-eng.html">3. Subspaces and Bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Subspaces and Bases</a></li>
 </ul>
 </li>
 </ul>
@@ -235,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-linear-algebra/02-fields-and-vector-spaces-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-linear-algebra/03-subspaces-and-bases-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -265,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap1-linear-algebra/02-fields-and-vector-spaces-eng.md" target="_blank"
+      <li><a href="../_sources/chap1-linear-algebra/03-subspaces-and-bases-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +344,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>2. Fields and Vector Spaces</h1>
+    <h1>3. Subspaces and Bases</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,8 +354,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-spaces">Vector Spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
 </ul>
             </nav>
         </div>
@@ -370,106 +367,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="fields-and-vector-spaces">
-<h1><a class="toc-backref" href="#id1">2. Fields and Vector Spaces</a><a class="headerlink" href="#fields-and-vector-spaces" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="subspaces-and-bases">
+<h1><a class="toc-backref" href="#id1">3. Subspaces and Bases</a><a class="headerlink" href="#subspaces-and-bases" title="Permalink to this headline">#</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#fields-and-vector-spaces" id="id1">2. Fields and Vector Spaces</a></p>
+<li><p><a class="reference internal" href="#subspaces-and-bases" id="id1">3. Subspaces and Bases</a></p>
 <ul>
-<li><p><a class="reference internal" href="#fields" id="id2">Fields</a></p></li>
-<li><p><a class="reference internal" href="#vector-spaces" id="id3">Vector Spaces</a></p></li>
+<li><p><a class="reference internal" href="#subspaces" id="id2">Subspaces</a></p></li>
+<li><p><a class="reference internal" href="#bases" id="id3">Bases</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="fields">
-<h2><a class="toc-backref" href="#id2">Fields</a><a class="headerlink" href="#fields" title="Permalink to this headline">#</a></h2>
-<p><strong>What is a field?</strong> A field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, denotes <span class="math notranslate nohighlight">\((\mathbb{F}, +, \cdot)\)</span>, is a set of objects/elements and 2 binary operations: multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>) and addition (<span class="math notranslate nohighlight">\(+\)</span>). The following also has to be satisfied:</p>
-<ul class="simple">
-<li><p>Rules for addition (<span class="math notranslate nohighlight">\(+\)</span>):</p>
-<ul>
-<li><p>Associative: <span class="math notranslate nohighlight">\((\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)\)</span></p></li>
-<li><p>Commutative: <span class="math notranslate nohighlight">\(\alpha + \beta = \beta + \alpha\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> identity element <span style="color:red"><span class="math notranslate nohighlight">\(0\)</span></span>: <span class="math notranslate nohighlight">\(\alpha + 0 = \alpha\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> inverse: <span class="math notranslate nohighlight">\(\forall \alpha \exists (-\alpha) \ni \alpha + (-\alpha) =\)</span> <span style="color:red"><span class="math notranslate nohighlight">\(0\)</span></span></p></li>
-</ul>
-</li>
-<li><p>Rules for multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>):</p>
-<ul>
-<li><p>Associative: <span class="math notranslate nohighlight">\((\alpha\beta)\gamma = \alpha(\beta\gamma)\)</span></p></li>
-<li><p>Commutative: <span class="math notranslate nohighlight">\(\alpha\beta = \beta\alpha\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> identity element <span style="color:red"><span class="math notranslate nohighlight">\(1\)</span></span>: <span class="math notranslate nohighlight">\(\alpha \cdot 1 = \alpha\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> inverse: <span class="math notranslate nohighlight">\(\forall \alpha \neq 0 \exists \alpha^{-1} \ni \alpha \cdot \alpha^{-1} =\)</span> <span style="color:red"><span class="math notranslate nohighlight">\(1\)</span></span></p></li>
-</ul>
-</li>
-</ul>
-<p>Also, multiplication distributes over addition:</p>
-<div class="math notranslate nohighlight">
-\[
-\alpha \cdot (\beta + \gamma) = \alpha \cdot \beta + \alpha \cdot \gamma
-\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The operation of the element with its inverse w.r.t. the operation equals the identity element of the operation.</p>
+<div class="section" id="subspaces">
+<h2><a class="toc-backref" href="#id2">Subspaces</a><a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h2>
 </div>
-<p>This means that, for addition (<span class="math notranslate nohighlight">\(+\)</span>), the identity is 0, and so the operation of the element on the inverse equals to 0, and vice versa, for multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>), the identity element is 1, and the operation of the element on the inverse equals to 1.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The identity element has to be in the respective field.</p>
-</div>
-<p>This means that if there exists a set of elements such that the identity element does not belong to this set, the set cannot be considered a field.</p>
-<p>Examples of fields that we usually use:</p>
-<ul class="simple">
-<li><p>Field of real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></li>
-<li><p>Field of complex numbers <span class="math notranslate nohighlight">\(\mathbb{C}\)</span></p></li>
-<li><p>Field of rational functions with real coefficients <span class="math notranslate nohighlight">\(\mathbb{R}(s)\)</span> e.g. <span class="math notranslate nohighlight">\(\frac{s^2 + 2s + 1}{s + 3}\)</span></p></li>
-</ul>
-<p>From definition of Fields, we will continue to define Vector Spaces.</p>
-</div>
-<div class="section" id="vector-spaces">
-<h2><a class="toc-backref" href="#id3">Vector Spaces</a><a class="headerlink" href="#vector-spaces" title="Permalink to this headline">#</a></h2>
-<p>Vector space, or <em>linear space</em>, denotes <span class="math notranslate nohighlight">\((V, \mathbb{F}, +, \cdot)\)</span>, is a set of elements <span class="math notranslate nohighlight">\(V\)</span>, here it is a set of vectors, and its respective field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, with all the property of a field.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here, the addition is between vectors, but the multiplication is between a vector and elements in the field, called <strong>scalar multiplication</strong>. This also implies that when a field is associated with a vector space, its elements are called <strong>scalars</strong>.</p>
-</div>
-<p>For vector space, the following rules apply:</p>
-<ul class="simple">
-<li><p>Addition (<span class="math notranslate nohighlight">\(+\)</span>)</p>
-<ul>
-<li><p>Associative: <span class="math notranslate nohighlight">\((x + y) + z = x + (y + z)\)</span> with <span class="math notranslate nohighlight">\(x, y, z \in V\)</span></p></li>
-<li><p>Commutative</p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> identity element <span class="math notranslate nohighlight">\(\theta\)</span>: “0-vector”</p></li>
-<li><p><span class="math notranslate nohighlight">\(\exists\)</span> inverse: <span class="math notranslate nohighlight">\(\forall x \in X \exists (-x) \ni x + (-x) = \theta\)</span></p></li>
-</ul>
-</li>
-<li><p>Scalar multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>)</p>
-<ul>
-<li><p><span class="math notranslate nohighlight">\((\alpha \beta) x = \alpha (\beta x)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1 \cdot x = x\)</span>, with <span class="math notranslate nohighlight">\(1\)</span> is the identity element from the field</p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \cdot x = \theta\)</span>, with <span class="math notranslate nohighlight">\(0\)</span> is the identity element from the field</p></li>
-<li><p>Distributive: <span class="math notranslate nohighlight">\((\alpha + \beta) x = \alpha \cdot x + \beta \cdot x\)</span></p></li>
-</ul>
-</li>
-</ul>
-<p>Examples of vector space:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\((\mathbb{R}^n, \mathbb{R})\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((\mathbb{C}^n, \mathbb{C})\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((\mathbb{C}^n, \mathbb{R})\)</span></p></li>
-</ul>
-<p>Example of not a vector space:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\((\mathbb{R}^n, \mathbb{C})\)</span></p></li>
-</ul>
-<p>A special example of a vector space is a <strong>function space</strong>. Given a set of functions <span class="math notranslate nohighlight">\(F\)</span> which map a set <span class="math notranslate nohighlight">\(D\)</span> to a set <span class="math notranslate nohighlight">\(V\)</span>, with V is a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, then we have <span class="math notranslate nohighlight">\((F(D, V), \mathbb{F})\)</span> a vector space.</p>
-<p>This is important, because as we usually do operations with functions, it is beneficial to be able to put a vector space structure on those functions, so that we can do mathematics on that vector space.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><span style="color:blue"><strong>Question</strong></span>: How to prove a space is a vector space?</p>
-<p>To prove that a space is a vector space, it is simple to show the associativity and commutativity properties, but it is generally hard to show that the space is closed under the addition and scalar multiplication operations. This is where we typically spend our time when trying to prove that a space is a vector space.</p>
-</div>
+<div class="section" id="bases">
+<h2><a class="toc-backref" href="#id3">Bases</a><a class="headerlink" href="#bases" title="Permalink to this headline">#</a></h2>
 </div>
 </div>
 
@@ -502,22 +417,13 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01-functions-eng.html"
+       href="02-fields-and-vector-spaces-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">1. Functions</p>
+        <p class="prev-next-title">2. Fields and Vector Spaces</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="03-subspaces-and-bases-eng.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Subspaces and Bases</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -534,8 +440,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-spaces">Vector Spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
 </ul>
   </nav></div>
 
