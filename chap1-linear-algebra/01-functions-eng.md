@@ -1,4 +1,6 @@
 # 1. Functions
+```{contents}
+```
 ## What is a function?
 Define 2 sets of elements, we define function as a mapping of elements from 1 set into another set.
 
