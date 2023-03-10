@@ -3,8 +3,8 @@
 
 format: jb-book
 root: intro
-parts:
-  - caption: I. Linear Algebra
-    chapters:
-    - file: chap1-linear-algebra/01-functions-eng
-    - file: chap1-linear-algebra/02-fields-and-vector-spaces-eng
+chapters:
+- file: chap1-linear-algebra/00-intro-eng
+  sections:
+  - file: chap1-linear-algebra/01-functions-eng
+  - file: chap1-linear-algebra/02-fields-and-vector-spaces-eng
