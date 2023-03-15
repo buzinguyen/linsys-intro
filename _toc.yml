@@ -12,3 +12,4 @@ parts:
       - file: chap1-linear-algebra/02-fields-and-vector-spaces-eng
       - file: chap1-linear-algebra/03-subspaces-and-bases-eng
       - file: chap1-linear-algebra/04-linear-maps-eng
+      - file: chap1-linear-algebra/05-matrix-rep-of-linear-map-eng
