@@ -63,6 +63,7 @@ But as stated above, the coordinate of a vector in a vector space w.r.t the choi
 
 ## Linear Equation
 From (3), we then have:
+
 $$
 \eta_i = \Sigma_{j=1}^{n} a_{ij} \xi_j \forall i = \{1\dots m\}, j = \{1 \dots n\} \tag 4
 $$
@@ -78,7 +79,7 @@ Where $A$ is a matrix whose elements are the $a_{ij}$ that we have just construc
 We can now see that $\mathcal{A}(u) = v \not \leftrightarrow Au = v$, but rather $\mathcal{A}(u) = v \leftrightarrow A \xi = \eta$.
 
 ```{note}
-$\mathcal{A}(u) = v \not \leftrightarrow Au = v$ is correct if we use standard basis elements in $\mathbb{R}^n, then the vectors themselves are the coordinates. But in general, $A$ operates on the coordinate representation of the vector rather than the vector.
+$\mathcal{A}(u) = v \not \leftrightarrow Au = v$ is correct if we use standard basis elements in $\mathbb{R}^n$, then the vectors themselves are the coordinates. But in general, $A$ operates on the coordinate representation of the vector rather than the vector.
 ```
 
 Overall, the key takeaway is: 
