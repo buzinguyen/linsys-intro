@@ -13,3 +13,4 @@ parts:
       - file: chap1-linear-algebra/03-subspaces-and-bases-eng
       - file: chap1-linear-algebra/04-linear-maps-eng
       - file: chap1-linear-algebra/05-matrix-rep-of-linear-map-eng
+      - file: chap1-linear-algebra/06-change-of-basis-eng
