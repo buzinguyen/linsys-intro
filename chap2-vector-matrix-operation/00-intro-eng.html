@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Linear Maps &#8212; Introduction to Linear Systems</title>
+    <title>Chapter 2: Vector and Matrix Operation &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -59,13 +59,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-vector-space/04-linear-maps-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/00-intro-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Matrix Representation of Linear Maps" href="05-matrix-rep-of-linear-map-eng.html" />
-    <link rel="prev" title="3. Subspaces and Bases" href="03-subspaces-and-bases-eng.html" />
+    <link rel="next" title="7. Norms" href="07-norms-eng.html" />
+    <link rel="prev" title="6. Change of Basis" href="../chap1-vector-space/06-change-of-basis-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,17 +156,17 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Vector Space</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-functions-eng.html">1. Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-subspaces-and-bases-eng.html">3. Subspaces and Bases</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4. Linear Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06-change-of-basis-eng.html">6. Change of Basis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap1-vector-space/00-intro-eng.html">Chapter 1: Vector Space</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/01-functions-eng.html">1. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/03-subspaces-and-bases-eng.html">3. Subspaces and Bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/04-linear-maps-eng.html">4. Linear Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/06-change-of-basis-eng.html">6. Change of Basis</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chap2-vector-matrix-operation/00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/07-norms-eng.html">7. Norms</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chapter 2: Vector and Matrix Operation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="07-norms-eng.html">7. Norms</a></li>
 </ul>
 </li>
 </ul>
@@ -242,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-vector-space/04-linear-maps-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap2-vector-matrix-operation/00-intro-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap1-vector-space/04-linear-maps-eng.md" target="_blank"
+      <li><a href="../_sources/chap2-vector-matrix-operation/00-intro-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,9 +339,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -354,20 +350,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>4. Linear Maps</h1>
+    <h1>Chapter 2: Vector and Matrix Operation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps-between-vector-spaces">Maps between vector spaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-space-and-null-space">Range space and null space</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -377,59 +364,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="linear-maps">
-<h1><a class="toc-backref" href="#id1">4. Linear Maps</a><a class="headerlink" href="#linear-maps" title="Permalink to this headline">#</a></h1>
-<div class="contents topic" id="contents">
-<p class="topic-title">Contents</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#linear-maps" id="id1">4. Linear Maps</a></p>
-<ul>
-<li><p><a class="reference internal" href="#maps-between-vector-spaces" id="id2">Maps between vector spaces</a></p></li>
-<li><p><a class="reference internal" href="#range-space-and-null-space" id="id3">Range space and null space</a></p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="maps-between-vector-spaces">
-<h2><a class="toc-backref" href="#id2">Maps between vector spaces</a><a class="headerlink" href="#maps-between-vector-spaces" title="Permalink to this headline">#</a></h2>
-<p>Define 2 vector spaces <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span> and <span class="math notranslate nohighlight">\((W, \mathbb{F})\)</span>. Define the map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> that takes the element of <span class="math notranslate nohighlight">\(V\)</span> to element of <span class="math notranslate nohighlight">\(W\)</span>.</p>
-<blockquote>
-<div><p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a linear map iff:</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{A}(\alpha_1 v_1 + \alpha_2 v_2) = \alpha_1 \mathcal{A}(v_1) + \alpha_2 \mathcal{A}(v_2)\]</div>
-<p>Notice that <span class="math notranslate nohighlight">\(v_1, v_2\)</span> are elements of <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{A}(v_1), \mathcal{A}(v_2)\)</span> are elements of <span class="math notranslate nohighlight">\(W\)</span>. This is called <strong>superposition</strong>.</p>
-</div></blockquote>
-</div>
-<div class="section" id="range-space-and-null-space">
-<h2><a class="toc-backref" href="#id3">Range space and null space</a><a class="headerlink" href="#range-space-and-null-space" title="Permalink to this headline">#</a></h2>
-<p>Given a linear map <span class="math notranslate nohighlight">\(\mathcal{A}:U \rightarrow V\)</span></p>
-<p><strong>Range space</strong></p>
-<div class="math notranslate nohighlight">
-\[\mathcal{R}(\mathcal{A}) = \{v | v = \mathcal{A}(u), u \in U\}\]</div>
-<p>In another word, the range space is a set of elements in the co-domain <span class="math notranslate nohighlight">\(V\)</span> that comes from the elements of the domain <span class="math notranslate nohighlight">\(U\)</span>. We often call the range space <strong>the image of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span></strong>.</p>
-<p><strong>Null space</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{N}(\mathcal{A}) = \{u | \mathcal{A}(u) = \theta_v\}\]</div>
-<p>In another word, the null space is the set of <span class="math notranslate nohighlight">\(u \in U\)</span> such that the linear map <span class="math notranslate nohighlight">\(\mathcal{A}(u)\)</span> equals the zero element in co-domain <span class="math notranslate nohighlight">\(V\)</span>. We often call the null space <strong>the kernel of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span></strong>.</p>
-<blockquote>
-<div><p><strong>Theorem</strong></p>
-<p>The range space of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a subspace of co-domain <span class="math notranslate nohighlight">\(V\)</span>; the null space of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a subspace of the domain <span class="math notranslate nohighlight">\(U\)</span>.</p>
-</div></blockquote>
-<blockquote>
-<div><p><strong>Theorem</strong>: Given <span class="math notranslate nohighlight">\(b \in V\)</span></p>
-<ol class="arabic simple">
-<li><p>If the linear equation <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span> has at least 1 solution, i.e. there is a <span class="math notranslate nohighlight">\(u\)</span> that satisfies <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span> <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> <span class="math notranslate nohighlight">\(b \in \mathcal{R}(\mathcal{A})\)</span></p></li>
-<li><p>If <span class="math notranslate nohighlight">\(b \in \mathcal{R}(\mathcal{A})\)</span>, then:<br />
-2.1. The linear equation <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span> has a <strong>unique</strong> solution <span class="math notranslate nohighlight">\(\leftrightarrow \mathcal{N}(\mathcal{A}) = \{\theta_u\}\)</span>. i.e. the only thing in the null space is the zero vector.<br />
-2.2. Let <span class="math notranslate nohighlight">\(x_0 \in U\)</span>  s.t. <span class="math notranslate nohighlight">\(\mathcal{A}(x_0) = b\)</span>, then <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b \leftrightarrow u - x_0 \in \mathcal{N}(\mathcal{A})\)</span></p></li>
-</ol>
-</div></blockquote>
-<p>From the theorem we can see that there is a relationship between the size of the null space and the solution of the linear equation <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Think of matrix multiplication as linear transformation. The rank of the matrix determines the dimension of the transformation result. For example, a 3D matrix with rank 2 has a transformation that results in a 2D space. Then, the 1D that goes missing is within the null space of the matrix.</p>
-<p>Think of it in the system of equation <span class="math notranslate nohighlight">\(Ax = v\)</span>, if <span class="math notranslate nohighlight">\(v = \begin{bmatrix}0\\0\end{bmatrix}\)</span> then the null space gives us all the possible solutions to the equation.</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="chapter-2-vector-and-matrix-operation">
+<h1>Chapter 2: Vector and Matrix Operation<a class="headerlink" href="#chapter-2-vector-and-matrix-operation" title="Permalink to this headline">#</a></h1>
+<p>This chapter discusses vector and matrix operations, including norms, induced norms and inner products. We will also look at adjoints and hermitian matrix.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -446,7 +384,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chap1-vector-space"
+            path: "./chap2-vector-matrix-operation"
         },
         predefinedOutput: true
     }
@@ -462,20 +400,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="03-subspaces-and-bases-eng.html"
+       href="../chap1-vector-space/06-change-of-basis-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">3. Subspaces and Bases</p>
+        <p class="prev-next-title">6. Change of Basis</p>
       </div>
     </a>
     <a class="right-next"
-       href="05-matrix-rep-of-linear-map-eng.html"
+       href="07-norms-eng.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">5. Matrix Representation of Linear Maps</p>
+        <p class="prev-next-title">7. Norms</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -485,21 +423,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps-between-vector-spaces">Maps between vector spaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-space-and-null-space">Range space and null space</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
