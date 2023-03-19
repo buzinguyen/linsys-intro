@@ -4,6 +4,8 @@ Cuốn sách này tổng hợp những trải nghiệm và kiến thức trong n
 
 Đối với các phần toán ứng dụng, sách sẽ có hỗ trợ source code đính kèm bằng ngôn ngữ Python chạy bằng Jupyter Notebook. Người đọc có thể chạy code interative ngay trên sách, hoặc tải notebook từ repo của sách.
 
+Vì có rất nhiều các chủ đề được đề cập trong sách nặng về lý thuyết hơn thực hành, do đó, thêm vào source code cho các bài có thể ứng dụng sẽ là các bộ câu hỏi để kiểm tra kiến thức cho từng bài được kèm theo ở cuối mỗi chương.
+
 Cuốn sách sẽ có 2 phiên bản tiếng Anh và tiếng Việt. Do các điều kiện về công việc và nghiên cứu, phiên bản tiếng Anh sẽ được hoàn thiện trước, và phiên bản tiếng Việt sẽ được hoàn thiện sau với sự hỗ trợ dịch thuật từ cộng đồng.
 
 Cuốn sách sẽ được mở mã nguồn hoàn toàn tại [repo của sách](https://github.com/buzinguyen/linsys-intro). Bạn cũng có thể xem bản online được cập nhật thường xuyên của sách tại [đây](https://www.buzinguyen.com/linsys-intro/intro.html).
