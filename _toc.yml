@@ -7,9 +7,13 @@ parts:
   - caption: I. Linear algebra
     chapters:
     - file: chap1-vector-space/00-intro-eng
-    - file: chap1-vector-space/01-functions-eng
-    - file: chap1-vector-space/02-fields-and-vector-spaces-eng
-    - file: chap1-vector-space/03-subspaces-and-bases-eng
-    - file: chap1-vector-space/04-linear-maps-eng
-    - file: chap1-vector-space/05-matrix-rep-of-linear-map-eng
-    - file: chap1-vector-space/06-change-of-basis-eng
+      sections:
+      - file: chap1-vector-space/01-functions-eng
+      - file: chap1-vector-space/02-fields-and-vector-spaces-eng
+      - file: chap1-vector-space/03-subspaces-and-bases-eng
+      - file: chap1-vector-space/04-linear-maps-eng
+      - file: chap1-vector-space/05-matrix-rep-of-linear-map-eng
+      - file: chap1-vector-space/06-change-of-basis-eng
+    - file: chap2-vector-matrix-operation/00-intro-eng
+      sections:
+      - file: chap2-vector-matrix-operation/07-norms-eng
