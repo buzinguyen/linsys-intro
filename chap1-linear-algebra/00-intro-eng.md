@@ -1,2 +1,0 @@
-# Chapter 1: Linear Algebra
-This chapter discusses important concepts and methods in linear algebra that are frequently used and referred to throughout the rest of the book. The topic aims to go through things from the ground up, and requires no pre-requisite from the readers, except for basic calculus.

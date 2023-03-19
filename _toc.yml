@@ -4,13 +4,12 @@
 format: jb-book
 root: intro
 parts:
-  - caption: I. Introduction to linear system theory
+  - caption: I. Linear algebra
     chapters:
-    - file: chap1-linear-algebra/00-intro-eng
-      sections:
-      - file: chap1-linear-algebra/01-functions-eng
-      - file: chap1-linear-algebra/02-fields-and-vector-spaces-eng
-      - file: chap1-linear-algebra/03-subspaces-and-bases-eng
-      - file: chap1-linear-algebra/04-linear-maps-eng
-      - file: chap1-linear-algebra/05-matrix-rep-of-linear-map-eng
-      - file: chap1-linear-algebra/06-change-of-basis-eng
+    - file: chap1-vector-space/00-intro-eng
+    - file: chap1-vector-space/01-functions-eng
+    - file: chap1-vector-space/02-fields-and-vector-spaces-eng
+    - file: chap1-vector-space/03-subspaces-and-bases-eng
+    - file: chap1-vector-space/04-linear-maps-eng
+    - file: chap1-vector-space/05-matrix-rep-of-linear-map-eng
+    - file: chap1-vector-space/06-change-of-basis-eng
