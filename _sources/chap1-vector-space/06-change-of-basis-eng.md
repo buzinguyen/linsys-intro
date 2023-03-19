@@ -28,7 +28,7 @@ $$
 \bar{\eta} = Q \eta \;\;\text{with}\;\; Q = \begin{bmatrix}\bar{v_1} & \bar{v_2} & \dots & \bar{v_m}\end{bmatrix}^{-1}\begin{bmatrix}v_1 & v_2 & \dots & v_m\end{bmatrix}
 $$
 
-In order to construct the relationship between the coordinates of different basis with respect to each other, we need a **bijective** relationship between the coordinates. Meaning that, the matrices $P, Q$, need to be bijective (see [Functions](../chap1-linear-algebra/01-functions-eng.md)).
+In order to construct the relationship between the coordinates of different basis with respect to each other, we need a **bijective** relationship between the coordinates. Meaning that, the matrices $P, Q$, need to be bijective (see [Functions](../chap1-vector-space/01-functions-eng.md)).
 
 From $P$ and $Q$, we can now construct the mapping between $A$ and $\bar{A}$:
 
