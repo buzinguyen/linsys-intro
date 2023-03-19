@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Subspaces and Bases &#8212; Introduction to Linear Systems</title>
+    <title>2. Fields and Vector Spaces &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-linear-algebra/03-subspaces-and-bases-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-vector-space/02-fields-and-vector-spaces-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Linear Maps" href="04-linear-maps-eng.html" />
-    <link rel="prev" title="2. Fields and Vector Spaces" href="02-fields-and-vector-spaces-eng.html" />
+    <link rel="next" title="3. Subspaces and Bases" href="03-subspaces-and-bases-eng.html" />
+    <link rel="prev" title="1. Functions" href="01-functions-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,10 +158,10 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Vector Space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01-functions-eng.html">1. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Subspaces and Bases</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Fields and Vector Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-subspaces-and-bases-eng.html">3. Subspaces and Bases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-linear-maps-eng.html">4. Linear Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06-change-of-basis-eng.html">6. Change of Basis</a></li>
@@ -236,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-linear-algebra/03-subspaces-and-bases-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-vector-space/02-fields-and-vector-spaces-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -266,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap1-linear-algebra/03-subspaces-and-bases-eng.md" target="_blank"
+      <li><a href="../_sources/chap1-vector-space/02-fields-and-vector-spaces-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>3. Subspaces and Bases</h1>
+    <h1>2. Fields and Vector Spaces</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,9 +358,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence">Linear independence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-spaces">Vector Spaces</a></li>
 </ul>
             </nav>
         </div>
@@ -372,85 +371,105 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="subspaces-and-bases">
-<h1><a class="toc-backref" href="#id1">3. Subspaces and Bases</a><a class="headerlink" href="#subspaces-and-bases" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="fields-and-vector-spaces">
+<h1><a class="toc-backref" href="#id1">2. Fields and Vector Spaces</a><a class="headerlink" href="#fields-and-vector-spaces" title="Permalink to this headline">#</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#subspaces-and-bases" id="id1">3. Subspaces and Bases</a></p>
+<li><p><a class="reference internal" href="#fields-and-vector-spaces" id="id1">2. Fields and Vector Spaces</a></p>
 <ul>
-<li><p><a class="reference internal" href="#subspaces" id="id2">Subspaces</a></p></li>
-<li><p><a class="reference internal" href="#linear-independence" id="id3">Linear independence</a></p></li>
-<li><p><a class="reference internal" href="#bases" id="id4">Bases</a></p></li>
+<li><p><a class="reference internal" href="#fields" id="id2">Fields</a></p></li>
+<li><p><a class="reference internal" href="#vector-spaces" id="id3">Vector Spaces</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>We know what is vector space, now we will follow along and discuss what is subspace, and an important characteristic of vector space in term of their bases element.</p>
-<div class="section" id="subspaces">
-<h2><a class="toc-backref" href="#id2">Subspaces</a><a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h2>
-<p>Consider a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, consider a set <span class="math notranslate nohighlight">\(W \subseteq V\)</span>, is <span class="math notranslate nohighlight">\(W\)</span> a vector space? Meaning that, if we apply addition and scalar multiplication to elements of <span class="math notranslate nohighlight">\(W\)</span>, will be still be staying inside <span class="math notranslate nohighlight">\(W\)</span>? i.e. is <span class="math notranslate nohighlight">\(W\)</span> closed under vector addition and scalar multiplication?</p>
-<blockquote>
-<div><p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> if:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(W \subseteq V\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(W\)</span> is closed under vector addition and scalar multiplication (defined for the parent space <span class="math notranslate nohighlight">\(V\)</span>) using the field associated <span class="math notranslate nohighlight">\(\mathbb{F}\)</span></p></li>
-</ol>
-</div></blockquote>
-<p><strong>Example</strong>: Given a space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, any planes that go through the origin is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<p>Some properties to consider: If <span class="math notranslate nohighlight">\(W_1, W_2\)</span> are both subspaces of <span class="math notranslate nohighlight">\(V\)</span>, then:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(W_1 \cap W_2\)</span> is a subspace</p></li>
-<li><p><span class="math notranslate nohighlight">\(W_1 \cup W_2\)</span> is not necessarily a subspace</p></li>
-</ol>
-<p>An example of this is if we consider the space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, if <span class="math notranslate nohighlight">\(W_1\)</span> is the x-axis, <span class="math notranslate nohighlight">\(W_2\)</span> is the y-axis, then their union is just 2 lines, but the addition of an element from <span class="math notranslate nohighlight">\(W_1\)</span> and an element from <span class="math notranslate nohighlight">\(W_2\)</span> belongs to the plane Oxy, which is not the same as the union of the 2 axes.</p>
-</div>
-<div class="section" id="linear-independence">
-<h2><a class="toc-backref" href="#id3">Linear independence</a><a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
-<blockquote>
-<div><p><strong>Definition</strong>: Given a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, given a set of vectors <span class="math notranslate nohighlight">\(\{v_1, v_2, \dots, v_p\}, v_i \in V\)</span>. This set of vectors is said to be <strong>linearly independent</strong> iff:</p>
-<div class="math notranslate nohighlight">
-\[\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta \rightarrow \alpha_i = 0 (\alpha_i \in \mathbb{F})\]</div>
-</div></blockquote>
-<p>This means that you cannot write any vector as a linear combination of other vectors:</p>
+<div class="section" id="fields">
+<h2><a class="toc-backref" href="#id2">Fields</a><a class="headerlink" href="#fields" title="Permalink to this headline">#</a></h2>
+<p><strong>What is a field?</strong> A field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, denotes <span class="math notranslate nohighlight">\((\mathbb{F}, +, \cdot)\)</span>, is a set of objects/elements and 2 binary operations: multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>) and addition (<span class="math notranslate nohighlight">\(+\)</span>). The following also has to be satisfied:</p>
+<ul class="simple">
+<li><p>Rules for addition (<span class="math notranslate nohighlight">\(+\)</span>):</p>
+<ul>
+<li><p>Associative: <span class="math notranslate nohighlight">\((\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)\)</span></p></li>
+<li><p>Commutative: <span class="math notranslate nohighlight">\(\alpha + \beta = \beta + \alpha\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> identity element <span style="color:red"><span class="math notranslate nohighlight">\(0\)</span></span>: <span class="math notranslate nohighlight">\(\alpha + 0 = \alpha\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> inverse: <span class="math notranslate nohighlight">\(\forall \alpha \exists (-\alpha) \ni \alpha + (-\alpha) =\)</span> <span style="color:red"><span class="math notranslate nohighlight">\(0\)</span></span></p></li>
+</ul>
+</li>
+<li><p>Rules for multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>):</p>
+<ul>
+<li><p>Associative: <span class="math notranslate nohighlight">\((\alpha\beta)\gamma = \alpha(\beta\gamma)\)</span></p></li>
+<li><p>Commutative: <span class="math notranslate nohighlight">\(\alpha\beta = \beta\alpha\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> identity element <span style="color:red"><span class="math notranslate nohighlight">\(1\)</span></span>: <span class="math notranslate nohighlight">\(\alpha \cdot 1 = \alpha\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> inverse: <span class="math notranslate nohighlight">\(\forall \alpha \neq 0 \exists \alpha^{-1} \ni \alpha \cdot \alpha^{-1} =\)</span> <span style="color:red"><span class="math notranslate nohighlight">\(1\)</span></span></p></li>
+</ul>
+</li>
+</ul>
+<p>Also, multiplication distributes over addition:</p>
 <div class="math notranslate nohighlight">
 \[
--\alpha_1 v_1 \neq \alpha_2 v_2 + \dots + \alpha_p v_p, \alpha_i \neq 0
+\alpha \cdot (\beta + \gamma) = \alpha \cdot \beta + \alpha \cdot \gamma
 \]</div>
-<p>Conversely, the set of vectors is said to be <strong>linearly dependent</strong> iff <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \dots, \alpha_p\)</span> not all 0, and:</p>
-<div class="math notranslate nohighlight">
-\[
-\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta
-\]</div>
-<p>This means that if the set of vectors is linear dependent, you can write one or some of those vectors as a linear combination of other vectors. This also means that <strong>those vectors are redundant</strong>.</p>
-<p>From the definition of linear independence, we define the basis set.</p>
-</div>
-<div class="section" id="bases">
-<h2><a class="toc-backref" href="#id4">Bases</a><a class="headerlink" href="#bases" title="Permalink to this headline">#</a></h2>
-<blockquote>
-<div><p><strong>Definition</strong>: Define a set of vectors <span class="math notranslate nohighlight">\(B = \{b_1,, b_2, \dots, b_n\}\)</span>. This set of vectors is called a <strong>basis</strong> of <span class="math notranslate nohighlight">\(V\)</span> iff:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(B\)</span> is linearly independent</p></li>
-</ol>
-</div></blockquote>
-<p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span> means that for for any <span class="math notranslate nohighlight">\(v \in V\)</span>, we can write <span class="math notranslate nohighlight">\(v\)</span> as a linear combination of the basis elements. i.e.:</p>
-<div class="math notranslate nohighlight">
-\[
-v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
-\]</div>
-<p>This means that the set of basis has to be (1) big enough so that it can represent any vector in <span class="math notranslate nohighlight">\(V\)</span>, and that it is (2) small enough so that we do not include any redundant factors.</p>
-<p>From here, we define the coordinates of a vector <span class="math notranslate nohighlight">\(v \in V\)</span> as the set of scalars that multiply the basis elements to get the vector <span class="math notranslate nohighlight">\(v\)</span>:</p>
-<blockquote>
-<div><p><strong>Definition</strong>: For <span class="math notranslate nohighlight">\(v \in V\)</span>, <span class="math notranslate nohighlight">\(v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n\)</span> then <span class="math notranslate nohighlight">\(\alpha_i\)</span>, i = <span class="math notranslate nohighlight">\(1 \dots n\)</span> are called the coordinates of <span class="math notranslate nohighlight">\(v\)</span> w.r.t. <span class="math notranslate nohighlight">\(B\)</span>.</p>
-</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can have an infinite number of basis for a vector space. However, the number of elements in any basis is constant. This is the <strong>dimension of the vector space</strong>.</p>
+<p>The operation of the element with its inverse w.r.t. the operation equals the identity element of the operation.</p>
 </div>
+<p>This means that, for addition (<span class="math notranslate nohighlight">\(+\)</span>), the identity is 0, and so the operation of the element on the inverse equals to 0, and vice versa, for multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>), the identity element is 1, and the operation of the element on the inverse equals to 1.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Once you have chosen the basis, the set of coordinates is unique for that basis. This means that given a basis, any vector in the space is uniquely defined by its coordinate.</p>
+<p>The identity element has to be in the respective field.</p>
+</div>
+<p>This means that if there exists a set of elements such that the identity element does not belong to this set, the set cannot be considered a field.</p>
+<p>Examples of fields that we usually use:</p>
+<ul class="simple">
+<li><p>Field of real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></li>
+<li><p>Field of complex numbers <span class="math notranslate nohighlight">\(\mathbb{C}\)</span></p></li>
+<li><p>Field of rational functions with real coefficients <span class="math notranslate nohighlight">\(\mathbb{R}(s)\)</span> e.g. <span class="math notranslate nohighlight">\(\frac{s^2 + 2s + 1}{s + 3}\)</span></p></li>
+</ul>
+<p>From definition of Fields, we will continue to define Vector Spaces.</p>
+</div>
+<div class="section" id="vector-spaces">
+<h2><a class="toc-backref" href="#id3">Vector Spaces</a><a class="headerlink" href="#vector-spaces" title="Permalink to this headline">#</a></h2>
+<p>Vector space, or <em>linear space</em>, denotes <span class="math notranslate nohighlight">\((V, \mathbb{F}, +, \cdot)\)</span>, is a set of elements <span class="math notranslate nohighlight">\(V\)</span>, here it is a set of vectors, and its respective field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, with all the property of a field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here, the addition is between vectors, but the multiplication is between a vector and elements in the field, called <strong>scalar multiplication</strong>. This also implies that when a field is associated with a vector space, its elements are called <strong>scalars</strong>.</p>
+</div>
+<p>For vector space, the following rules apply:</p>
+<ul class="simple">
+<li><p>Addition (<span class="math notranslate nohighlight">\(+\)</span>)</p>
+<ul>
+<li><p>Associative: <span class="math notranslate nohighlight">\((x + y) + z = x + (y + z)\)</span> with <span class="math notranslate nohighlight">\(x, y, z \in V\)</span></p></li>
+<li><p>Commutative</p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> identity element <span class="math notranslate nohighlight">\(\theta\)</span>: “0-vector”</p></li>
+<li><p><span class="math notranslate nohighlight">\(\exists\)</span> inverse: <span class="math notranslate nohighlight">\(\forall x \in X \exists (-x) \ni x + (-x) = \theta\)</span></p></li>
+</ul>
+</li>
+<li><p>Scalar multiplication (<span class="math notranslate nohighlight">\(\cdot\)</span>)</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\((\alpha \beta) x = \alpha (\beta x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 \cdot x = x\)</span>, with <span class="math notranslate nohighlight">\(1\)</span> is the identity element from the field</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \cdot x = \theta\)</span>, with <span class="math notranslate nohighlight">\(0\)</span> is the identity element from the field</p></li>
+<li><p>Distributive: <span class="math notranslate nohighlight">\((\alpha + \beta) x = \alpha \cdot x + \beta \cdot x\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p>Examples of vector space:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\mathbb{R}^n, \mathbb{R})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{C}^n, \mathbb{C})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{C}^n, \mathbb{R})\)</span></p></li>
+</ul>
+<p>Example of not a vector space:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\mathbb{R}^n, \mathbb{C})\)</span></p></li>
+</ul>
+<p>A special example of a vector space is a <strong>function space</strong>. Given a set of functions <span class="math notranslate nohighlight">\(F\)</span> which map a set <span class="math notranslate nohighlight">\(D\)</span> to a set <span class="math notranslate nohighlight">\(V\)</span>, with V is a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, then we have <span class="math notranslate nohighlight">\((F(D, V), \mathbb{F})\)</span> a vector space.</p>
+<p>This is important, because as we usually do operations with functions, it is beneficial to be able to put a vector space structure on those functions, so that we can do mathematics on that vector space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span style="color:blue"><strong>Question</strong></span>: How to prove a space is a vector space?</p>
+<p>To prove that a space is a vector space, it is simple to show the associativity and commutativity properties, but it is generally hard to show that the space is closed under the addition and scalar multiplication operations. This is where we typically spend our time when trying to prove that a space is a vector space.</p>
 </div>
 </div>
 </div>
@@ -468,7 +487,7 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
         },
         kernelOptions: {
             name: "python3",
-            path: "./chap1-linear-algebra"
+            path: "./chap1-vector-space"
         },
         predefinedOutput: true
     }
@@ -484,20 +503,20 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02-fields-and-vector-spaces-eng.html"
+       href="01-functions-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2. Fields and Vector Spaces</p>
+        <p class="prev-next-title">1. Functions</p>
       </div>
     </a>
     <a class="right-next"
-       href="04-linear-maps-eng.html"
+       href="03-subspaces-and-bases-eng.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. Linear Maps</p>
+        <p class="prev-next-title">3. Subspaces and Bases</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -516,9 +535,8 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence">Linear independence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-spaces">Vector Spaces</a></li>
 </ul>
   </nav></div>
 

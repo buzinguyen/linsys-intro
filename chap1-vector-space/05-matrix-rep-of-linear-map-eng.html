@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Subspaces and Bases &#8212; Introduction to Linear Systems</title>
+    <title>5. Matrix Representation of Linear Maps &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-linear-algebra/03-subspaces-and-bases-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-vector-space/05-matrix-rep-of-linear-map-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Linear Maps" href="04-linear-maps-eng.html" />
-    <link rel="prev" title="2. Fields and Vector Spaces" href="02-fields-and-vector-spaces-eng.html" />
+    <link rel="next" title="6. Change of Basis" href="06-change-of-basis-eng.html" />
+    <link rel="prev" title="4. Linear Maps" href="04-linear-maps-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,12 +158,12 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Vector Space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01-functions-eng.html">1. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Subspaces and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-subspaces-and-bases-eng.html">3. Subspaces and Bases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-linear-maps-eng.html">4. Linear Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Matrix Representation of Linear Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06-change-of-basis-eng.html">6. Change of Basis</a></li>
 </ul>
 
@@ -236,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-linear-algebra/03-subspaces-and-bases-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-vector-space/05-matrix-rep-of-linear-map-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -266,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap1-linear-algebra/03-subspaces-and-bases-eng.md" target="_blank"
+      <li><a href="../_sources/chap1-vector-space/05-matrix-rep-of-linear-map-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>3. Subspaces and Bases</h1>
+    <h1>5. Matrix Representation of Linear Maps</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,9 +358,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence">Linear independence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">Linear Equation</a></li>
 </ul>
             </nav>
         </div>
@@ -372,86 +372,97 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="subspaces-and-bases">
-<h1><a class="toc-backref" href="#id1">3. Subspaces and Bases</a><a class="headerlink" href="#subspaces-and-bases" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="matrix-representation-of-linear-maps">
+<h1><a class="toc-backref" href="#id1">5. Matrix Representation of Linear Maps</a><a class="headerlink" href="#matrix-representation-of-linear-maps" title="Permalink to this headline">#</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#subspaces-and-bases" id="id1">3. Subspaces and Bases</a></p>
+<li><p><a class="reference internal" href="#matrix-representation-of-linear-maps" id="id1">5. Matrix Representation of Linear Maps</a></p>
 <ul>
-<li><p><a class="reference internal" href="#subspaces" id="id2">Subspaces</a></p></li>
-<li><p><a class="reference internal" href="#linear-independence" id="id3">Linear independence</a></p></li>
-<li><p><a class="reference internal" href="#bases" id="id4">Bases</a></p></li>
+<li><p><a class="reference internal" href="#definition" id="id2">Definition</a></p></li>
+<li><p><a class="reference internal" href="#bases" id="id3">Bases</a></p></li>
+<li><p><a class="reference internal" href="#linear-equation" id="id4">Linear Equation</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>We know what is vector space, now we will follow along and discuss what is subspace, and an important characteristic of vector space in term of their bases element.</p>
-<div class="section" id="subspaces">
-<h2><a class="toc-backref" href="#id2">Subspaces</a><a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h2>
-<p>Consider a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, consider a set <span class="math notranslate nohighlight">\(W \subseteq V\)</span>, is <span class="math notranslate nohighlight">\(W\)</span> a vector space? Meaning that, if we apply addition and scalar multiplication to elements of <span class="math notranslate nohighlight">\(W\)</span>, will be still be staying inside <span class="math notranslate nohighlight">\(W\)</span>? i.e. is <span class="math notranslate nohighlight">\(W\)</span> closed under vector addition and scalar multiplication?</p>
+<p>We now know what are linear maps, now let’s look at how to represent those linear maps as matrix multiplication.</p>
+<div class="section" id="definition">
+<h2><a class="toc-backref" href="#id2">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<p>First, let’s look at a statement:</p>
 <blockquote>
-<div><p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> if:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(W \subseteq V\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(W\)</span> is closed under vector addition and scalar multiplication (defined for the parent space <span class="math notranslate nohighlight">\(V\)</span>) using the field associated <span class="math notranslate nohighlight">\(\mathbb{F}\)</span></p></li>
-</ol>
+<div><p>Any <strong>linear</strong> map between <strong>finite dimensional vector spaces</strong> can be represented as matrix multiplication.</p>
 </div></blockquote>
-<p><strong>Example</strong>: Given a space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, any planes that go through the origin is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<p>Some properties to consider: If <span class="math notranslate nohighlight">\(W_1, W_2\)</span> are both subspaces of <span class="math notranslate nohighlight">\(V\)</span>, then:</p>
+<p>There are two important pieces of information within this statement, that is:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(W_1 \cap W_2\)</span> is a subspace</p></li>
-<li><p><span class="math notranslate nohighlight">\(W_1 \cup W_2\)</span> is not necessarily a subspace</p></li>
+<li><p>We are considering <strong>linear map</strong> only</p></li>
+<li><p>The vector spaces that we are operating need to be <strong>finite dimensional</strong></p></li>
 </ol>
-<p>An example of this is if we consider the space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, if <span class="math notranslate nohighlight">\(W_1\)</span> is the x-axis, <span class="math notranslate nohighlight">\(W_2\)</span> is the y-axis, then their union is just 2 lines, but the addition of an element from <span class="math notranslate nohighlight">\(W_1\)</span> and an element from <span class="math notranslate nohighlight">\(W_2\)</span> belongs to the plane Oxy, which is not the same as the union of the 2 axes.</p>
+<p>Now, let’s see how can we represent a linear map as a matrix multiplication.</p>
+<p>Given a linear map <span class="math notranslate nohighlight">\(\mathcal{A}: U \rightarrow V\)</span>, this means that <span class="math notranslate nohighlight">\(\mathcal{A}(u) = v\)</span> (<span class="math notranslate nohighlight">\(\mathcal{A}\)</span> operates on an element <span class="math notranslate nohighlight">\(u\)</span> of domain <span class="math notranslate nohighlight">\(U\)</span> gives an element <span class="math notranslate nohighlight">\(v\)</span> of co-domain <span class="math notranslate nohighlight">\(V\)</span>). We want to write this as <span class="math notranslate nohighlight">\(Au = v\)</span> with <span class="math notranslate nohighlight">\(A\)</span> now is a matrix. This means that <span class="math notranslate nohighlight">\(A\)</span> is a matrix representation of the linear map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <span class="math notranslate nohighlight">\(u, v\)</span> in <span class="math notranslate nohighlight">\(\mathcal{A}(u) = v\)</span> and the <span class="math notranslate nohighlight">\(u, v\)</span> in matrix multiplication <span class="math notranslate nohighlight">\(Au = v\)</span> are not necessarily the same. We will see more why this is the case later.</p>
 </div>
-<div class="section" id="linear-independence">
-<h2><a class="toc-backref" href="#id3">Linear independence</a><a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
-<blockquote>
-<div><p><strong>Definition</strong>: Given a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, given a set of vectors <span class="math notranslate nohighlight">\(\{v_1, v_2, \dots, v_p\}, v_i \in V\)</span>. This set of vectors is said to be <strong>linearly independent</strong> iff:</p>
-<div class="math notranslate nohighlight">
-\[\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta \rightarrow \alpha_i = 0 (\alpha_i \in \mathbb{F})\]</div>
-</div></blockquote>
-<p>This means that you cannot write any vector as a linear combination of other vectors:</p>
-<div class="math notranslate nohighlight">
-\[
--\alpha_1 v_1 \neq \alpha_2 v_2 + \dots + \alpha_p v_p, \alpha_i \neq 0
-\]</div>
-<p>Conversely, the set of vectors is said to be <strong>linearly dependent</strong> iff <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \dots, \alpha_p\)</span> not all 0, and:</p>
-<div class="math notranslate nohighlight">
-\[
-\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta
-\]</div>
-<p>This means that if the set of vectors is linear dependent, you can write one or some of those vectors as a linear combination of other vectors. This also means that <strong>those vectors are redundant</strong>.</p>
-<p>From the definition of linear independence, we define the basis set.</p>
 </div>
 <div class="section" id="bases">
-<h2><a class="toc-backref" href="#id4">Bases</a><a class="headerlink" href="#bases" title="Permalink to this headline">#</a></h2>
-<blockquote>
-<div><p><strong>Definition</strong>: Define a set of vectors <span class="math notranslate nohighlight">\(B = \{b_1,, b_2, \dots, b_n\}\)</span>. This set of vectors is called a <strong>basis</strong> of <span class="math notranslate nohighlight">\(V\)</span> iff:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(B\)</span> is linearly independent</p></li>
-</ol>
-</div></blockquote>
-<p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span> means that for for any <span class="math notranslate nohighlight">\(v \in V\)</span>, we can write <span class="math notranslate nohighlight">\(v\)</span> as a linear combination of the basis elements. i.e.:</p>
+<h2><a class="toc-backref" href="#id3">Bases</a><a class="headerlink" href="#bases" title="Permalink to this headline">#</a></h2>
+<p>Let’s first construct bases for both our domain and co-domain. This is an important step because the matrix representation depends on the bases of both the domain and co-domain. In another word, if you have the bases for both the domain and co-domain, and the definition of the linear map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, you can then construct the matrix <span class="math notranslate nohighlight">\(A\)</span>. If you change the bases, then matrix <span class="math notranslate nohighlight">\(A\)</span> will change.</p>
+<p>Assume that <span class="math notranslate nohighlight">\(U\)</span> is an n-dimensional vector space, and <span class="math notranslate nohighlight">\(V\)</span> is an m-dimensional vector space, given the basis <span class="math notranslate nohighlight">\(\{u_j\}^n_{j=1}\)</span> and <span class="math notranslate nohighlight">\(\{v_j\}^m_{j=1}\)</span> for each vector space respectively. Recall the meaning of basis: <em><span class="math notranslate nohighlight">\(\{u_j\}^n_{j=1}\)</span> is the set of basis for vector space <span class="math notranslate nohighlight">\(U\)</span> iff any vectors in <span class="math notranslate nohighlight">\(U\)</span> can be represented as a linear combination of <span class="math notranslate nohighlight">\(u_j\)</span></em>. In addition, the coordinate of a vector <span class="math notranslate nohighlight">\(x \in U\)</span> w.r.t the choice of basis is unique, that is:</p>
 <div class="math notranslate nohighlight">
 \[
-v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
+\forall x \in U \exists! \xi = \{\xi_i\}^n_{i=1} \ni x = \Sigma_{j=1}^{n}\xi_j u_j
 \]</div>
-<p>This means that the set of basis has to be (1) big enough so that it can represent any vector in <span class="math notranslate nohighlight">\(V\)</span>, and that it is (2) small enough so that we do not include any redundant factors.</p>
-<p>From here, we define the coordinates of a vector <span class="math notranslate nohighlight">\(v \in V\)</span> as the set of scalars that multiply the basis elements to get the vector <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<p>With <span class="math notranslate nohighlight">\(\xi_i\)</span> are the unique coordinate of <span class="math notranslate nohighlight">\(x\)</span> wrt choice of basis in <span class="math notranslate nohighlight">\(U\)</span>. From here, we have the following derivation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \mathcal{A}(x) &amp;= \mathcal{A}(\Sigma_{j=1}^{n}\xi_j u_j) \\
+    &amp;= \Sigma_{j=1}^{n}\xi_j\mathcal{A}(u_j) &amp;&amp; \text{superposition of linear map} \tag 1 \\
+\end{align*}
+\end{split}\]</div>
+<p>Given that each <span class="math notranslate nohighlight">\(\mathcal{A}(u_j)\)</span> is a linear map of element from <span class="math notranslate nohighlight">\(U \rightarrow V\)</span>, i.e. <span class="math notranslate nohighlight">\(\mathcal{A}(u_j) \in V\)</span>, we then have:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \mathcal{A}(u_j) = \Sigma_{i=1}^{m} a_{ij} v_i \tag 2
+\end{align*}
+\]</div>
+<p>Think of it as the operation of linear map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> on the j-th basis of <span class="math notranslate nohighlight">\(U\)</span> to get the representation in term of basis elements in <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>From (1) and (2), we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \mathcal{A}(x) &amp;= \Sigma_{j=1}^{n}\xi_j\mathcal{A}(u_j) \\
+    &amp;= \Sigma_{j=1}^{n}\xi_j\Sigma_{i=1}^{m} a_{ij} v_i \\
+    &amp;= \Sigma_{i=1}^{m}(\Sigma_{j=1}^{n} a_{ij} \xi_j) v_i \\
+    &amp;= \Sigma_{i=1}^{m} \eta_i v_i \tag 3
+\end{align*}
+\end{split}\]</div>
+<p>But as stated above, the coordinate of a vector in a vector space w.r.t the choice of basis is unique, hence, what we end up is a linear equation describing how the coordinates of vector <span class="math notranslate nohighlight">\(x\)</span> change under the mapping <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>.</p>
+</div>
+<div class="section" id="linear-equation">
+<h2><a class="toc-backref" href="#id4">Linear Equation</a><a class="headerlink" href="#linear-equation" title="Permalink to this headline">#</a></h2>
+<p>From (3), we then have:</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_i = \Sigma_{j=1}^{n} a_{ij} \xi_j \forall i = \{1\dots m\}, j = \{1 \dots n\} \tag 4
+\]</div>
+<p>Rewriting this in matrix form, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\eta = A \xi \tag 5
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(A\)</span> is a matrix whose elements are the <span class="math notranslate nohighlight">\(a_{ij}\)</span> that we have just constructed. <span class="math notranslate nohighlight">\(A\)</span> takes the coordinates representation of <span class="math notranslate nohighlight">\(x\)</span> in the domain and maps to the coordinate representation of the vector in the co-domain w.r.t choices of bases <span class="math notranslate nohighlight">\(\{u_i\}_{i=1}^n, \{v_j\}_{j=1}^m\)</span>.</p>
+<p>We can now see that <span class="math notranslate nohighlight">\(\mathcal{A}(u) = v \not \leftrightarrow Au = v\)</span>, but rather <span class="math notranslate nohighlight">\(\mathcal{A}(u) = v \leftrightarrow A \xi = \eta\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(\mathcal{A}(u) = v \not \leftrightarrow Au = v\)</span> is correct if we use standard basis elements in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, then the vectors themselves are the coordinates. But in general, <span class="math notranslate nohighlight">\(A\)</span> operates on the coordinate representation of the vector rather than the vector.</p>
+</div>
+<p>Overall, the key takeaway is:</p>
 <blockquote>
-<div><p><strong>Definition</strong>: For <span class="math notranslate nohighlight">\(v \in V\)</span>, <span class="math notranslate nohighlight">\(v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n\)</span> then <span class="math notranslate nohighlight">\(\alpha_i\)</span>, i = <span class="math notranslate nohighlight">\(1 \dots n\)</span> are called the coordinates of <span class="math notranslate nohighlight">\(v\)</span> w.r.t. <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<div><p>The <span class="math notranslate nohighlight">\(j^\text{th}\)</span> column of the matrix <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\mathcal{A}(u_j)\)</span> expressed w.r.t the basis elements <span class="math notranslate nohighlight">\(\{v_i\}\)</span></p>
 </div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can have an infinite number of basis for a vector space. However, the number of elements in any basis is constant. This is the <strong>dimension of the vector space</strong>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Once you have chosen the basis, the set of coordinates is unique for that basis. This means that given a basis, any vector in the space is uniquely defined by its coordinate.</p>
-</div>
 </div>
 </div>
 
@@ -468,7 +479,7 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
         },
         kernelOptions: {
             name: "python3",
-            path: "./chap1-linear-algebra"
+            path: "./chap1-vector-space"
         },
         predefinedOutput: true
     }
@@ -484,20 +495,20 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02-fields-and-vector-spaces-eng.html"
+       href="04-linear-maps-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2. Fields and Vector Spaces</p>
+        <p class="prev-next-title">4. Linear Maps</p>
       </div>
     </a>
     <a class="right-next"
-       href="04-linear-maps-eng.html"
+       href="06-change-of-basis-eng.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. Linear Maps</p>
+        <p class="prev-next-title">6. Change of Basis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -516,9 +527,9 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence">Linear independence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equation">Linear Equation</a></li>
 </ul>
   </nav></div>
 
