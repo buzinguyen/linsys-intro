@@ -414,7 +414,7 @@ x = \xi_1 u_1 + \xi_2 u_2 + \dots + \xi_n u_n =\begin{bmatrix}u_1 &amp; u_2 &amp
 \mathcal{C} = \{c_1, c_2, c_3\} = \{\begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}, \begin{bmatrix}1 \\ 0 \\ 1\end{bmatrix}\} 
 \end{split}\]</div>
 <p>Suppose <span class="math notranslate nohighlight">\(\mathcal{A}(b_1) = \begin{bmatrix}2 \\ -1 \\ 0\end{bmatrix}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{A}(b_2) = \begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{A}(b_3) = \begin{bmatrix}0 \\ 4 \\ 2\end{bmatrix}\)</span> as how the linear map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> operates on the bases in <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>. Write down the matrix representation of the mapping <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>.</p>
-<p>Now, the following up question that we need to ask here is which are the basis that we are mapping to. In case that we have <span class="math notranslate nohighlight">\(\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{B}}\)</span>, then it is really simple to find <span class="math notranslate nohighlight">\(A\)</span>, that is:</p>
+<p>Now, the following up question that we need to ask here is which are the sets of bases that we are mapping to. In case that we have <span class="math notranslate nohighlight">\(\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{B}}\)</span>, then it is really simple to find <span class="math notranslate nohighlight">\(A\)</span>, that is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -422,11 +422,21 @@ x = \xi_1 u_1 + \xi_2 u_2 + \dots + \xi_n u_n =\begin{bmatrix}u_1 &amp; u_2 &amp
     &amp;= \begin{bmatrix}2 &amp; 0 &amp; 0 \\ -1 &amp; 0 &amp; 4 \\ 0 &amp; 0 &amp; 2\end{bmatrix}
 \end{aligned}
 \end{split}\]</div>
-<p>Now, suppose that we change our linea map definition to <span class="math notranslate nohighlight">\(\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{C}}\)</span>. We are both working on the vector space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> for domain and co-domain, and we are changing the choice of basis from <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> for domain and <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> for co-domain. Then our new <span class="math notranslate nohighlight">\(A\)</span> is:</p>
+<p>This is due to the construction rule of <span class="math notranslate nohighlight">\(A\)</span>, that is <em>the <span class="math notranslate nohighlight">\(j^\text{th}\)</span> column of the matrix <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\mathcal{A}(u_j)\)</span> expressed w.r.t the basis elements <span class="math notranslate nohighlight">\(\{v_i\}\)</span></em>.</p>
+<p>Now, suppose that <span class="math notranslate nohighlight">\(\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{C}}\)</span>. Assume that the coordinate w.r.t <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> is <span class="math notranslate nohighlight">\(\xi\)</span> and coordinate w.r.t <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> is <span class="math notranslate nohighlight">\(\eta\)</span>. <span class="math notranslate nohighlight">\(\mathcal{A}(\cdot)\)</span> will operate on a vector of the vector space, whereas the matrix representation <span class="math notranslate nohighlight">\(A\)</span> operates on the coordinates of the vector w.r.t the choice of basis. In addition, when writing the coordinate of a vector w.r.t to the choice of basis, it is:</p>
 <div class="math notranslate nohighlight">
-\[
-A = 
-\]</div>
+\[x = x_1 a_1 + x_2 a_2 + \dots x_n a_n \text{with coordinate} \{x_i\} \text{and basis} \{a_i\}\]</div>
+<p>Thus, if <span class="math notranslate nohighlight">\(\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{C}}\)</span> means <span class="math notranslate nohighlight">\(\eta = A \xi\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    \begin{bmatrix}c_1 &amp; c_2 &amp; c_3\end{bmatrix}\eta &amp;= \begin{bmatrix}\mathcal{A}(b_1) &amp; \mathcal{A}(b_2) &amp; \mathcal{A}(b_2)\end{bmatrix}\begin{bmatrix}b_1 &amp; b_2 &amp; b_3\end{bmatrix}\xi \\
+    \rightarrow \eta &amp;= \begin{bmatrix}c_1 &amp; c_2 &amp; c_3\end{bmatrix}^{-1}\begin{bmatrix}\mathcal{A}(b_1) &amp; \mathcal{A}(b_2) &amp; \mathcal{A}(b_2)\end{bmatrix}\begin{bmatrix}b_1 &amp; b_2 &amp; b_3\end{bmatrix}\xi\\
+    \rightarrow A &amp;= \begin{bmatrix}c_1 &amp; c_2 &amp; c_3\end{bmatrix}^{-1}\begin{bmatrix}\mathcal{A}(b_1) &amp; \mathcal{A}(b_2) &amp; \mathcal{A}(b_2)\end{bmatrix}\begin{bmatrix}b_1 &amp; b_2 &amp; b_3\end{bmatrix} \\
+    &amp;= \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}^{-1}\begin{bmatrix}2 &amp; 0 &amp; 0 \\ -1 &amp; 0 &amp; 4 \\ 0 &amp; 0 &amp; 2\end{bmatrix}\begin{bmatrix}1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} \\
+    &amp;= \dots
+\end{aligned}
+\end{split}\]</div>
 </div>
 
     <script type="text/x-thebe-config">

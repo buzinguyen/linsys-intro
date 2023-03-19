@@ -65,7 +65,7 @@ $$
 
 Suppose $\mathcal{A}(b_1) = \begin{bmatrix}2 \\ -1 \\ 0\end{bmatrix}$, $\mathcal{A}(b_2) = \begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}$, $\mathcal{A}(b_3) = \begin{bmatrix}0 \\ 4 \\ 2\end{bmatrix}$ as how the linear map $\mathcal{A}$ operates on the bases in $\mathcal{B}$. Write down the matrix representation of the mapping $\mathcal{A}$.
 
-Now, the following up question that we need to ask here is which are the basis that we are mapping to. In case that we have $\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{B}}$, then it is really simple to find $A$, that is:
+Now, the following up question that we need to ask here is which are the sets of bases that we are mapping to. In case that we have $\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{B}}$, then it is really simple to find $A$, that is:
 
 $$
 \begin{aligned}
@@ -74,8 +74,20 @@ $$
 \end{aligned}
 $$
 
-Now, suppose that we change our linea map definition to $\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{C}}$. We are both working on the vector space $\mathbb{R}^3$ for domain and co-domain, and we are changing the choice of basis from $\mathcal{B}$ for domain and $\mathcal{C}$ for co-domain. Then our new $A$ is:
+This is due to the construction rule of $A$, that is *the $j^\text{th}$ column of the matrix $A$ is $\mathcal{A}(u_j)$ expressed w.r.t the basis elements $\{v_i\}$*.
+
+Now, suppose that $\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{C}}$. Assume that the coordinate w.r.t $\mathcal{B}$ is $\xi$ and coordinate w.r.t $\mathcal{C}$ is $\eta$. $\mathcal{A}(\cdot)$ will operate on a vector of the vector space, whereas the matrix representation $A$ operates on the coordinates of the vector w.r.t the choice of basis. In addition, when writing the coordinate of a vector w.r.t to the choice of basis, it is:
+
+$$x = x_1 a_1 + x_2 a_2 + \dots x_n a_n \text{with coordinate} \{x_i\} \text{and basis} \{a_i\}$$
+
+Thus, if $\mathcal{A}: \mathbb{R}^3_{\mathcal{B}} \rightarrow \mathbb{R}^3_{\mathcal{C}}$ means $\eta = A \xi$, then 
 
 $$
-A = 
+\begin{aligned}
+    \begin{bmatrix}c_1 & c_2 & c_3\end{bmatrix}\eta &= \begin{bmatrix}\mathcal{A}(b_1) & \mathcal{A}(b_2) & \mathcal{A}(b_2)\end{bmatrix}\begin{bmatrix}b_1 & b_2 & b_3\end{bmatrix}\xi \\
+    \rightarrow \eta &= \begin{bmatrix}c_1 & c_2 & c_3\end{bmatrix}^{-1}\begin{bmatrix}\mathcal{A}(b_1) & \mathcal{A}(b_2) & \mathcal{A}(b_2)\end{bmatrix}\begin{bmatrix}b_1 & b_2 & b_3\end{bmatrix}\xi\\
+    \rightarrow A &= \begin{bmatrix}c_1 & c_2 & c_3\end{bmatrix}^{-1}\begin{bmatrix}\mathcal{A}(b_1) & \mathcal{A}(b_2) & \mathcal{A}(b_2)\end{bmatrix}\begin{bmatrix}b_1 & b_2 & b_3\end{bmatrix} \\
+    &= \begin{bmatrix}1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}^{-1}\begin{bmatrix}2 & 0 & 0 \\ -1 & 0 & 4 \\ 0 & 0 & 2\end{bmatrix}\begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix} \\
+    &= \dots
+\end{aligned}
 $$
