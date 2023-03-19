@@ -69,8 +69,8 @@ A special example of a vector space is a **function space**. Given a set of func
 
 This is important, because as we usually do operations with functions, it is beneficial to be able to put a vector space structure on those functions, so that we can do mathematics on that vector space.
 
-```{note}
-<span style="color:blue">**Question**</span>: How to prove a space is a vector space?
+```{admonition} How to prove a space is a vector space?
+:class: note
 
 To prove that a space is a vector space, it is simple to show the associativity and commutativity properties, but it is generally hard to show that the space is closed under the addition and scalar multiplication operations. This is where we typically spend our time when trying to prove that a space is a vector space.
 ```

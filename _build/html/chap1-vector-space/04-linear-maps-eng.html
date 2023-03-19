@@ -165,6 +165,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">4. Linear Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06-change-of-basis-eng.html">6. Change of Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00-exercise-eng.html">Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00-solution-eng.html">Solution</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chap2-vector-matrix-operation/00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -393,12 +395,13 @@ document.write(`
 <div class="section" id="maps-between-vector-spaces">
 <h2><a class="toc-backref" href="#id2">Maps between vector spaces</a><a class="headerlink" href="#maps-between-vector-spaces" title="Permalink to this headline">#</a></h2>
 <p>Define 2 vector spaces <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span> and <span class="math notranslate nohighlight">\((W, \mathbb{F})\)</span>. Define the map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> that takes the element of <span class="math notranslate nohighlight">\(V\)</span> to element of <span class="math notranslate nohighlight">\(W\)</span>.</p>
-<blockquote>
-<div><p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a linear map iff:</p>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p><span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a linear map iff:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{A}(\alpha_1 v_1 + \alpha_2 v_2) = \alpha_1 \mathcal{A}(v_1) + \alpha_2 \mathcal{A}(v_2)\]</div>
 <p>Notice that <span class="math notranslate nohighlight">\(v_1, v_2\)</span> are elements of <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{A}(v_1), \mathcal{A}(v_2)\)</span> are elements of <span class="math notranslate nohighlight">\(W\)</span>. This is called <strong>superposition</strong>.</p>
-</div></blockquote>
+</div>
 </div>
 <div class="section" id="range-space-and-null-space">
 <h2><a class="toc-backref" href="#id3">Range space and null space</a><a class="headerlink" href="#range-space-and-null-space" title="Permalink to this headline">#</a></h2>
@@ -411,19 +414,20 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathcal{N}(\mathcal{A}) = \{u | \mathcal{A}(u) = \theta_v\}\]</div>
 <p>In another word, the null space is the set of <span class="math notranslate nohighlight">\(u \in U\)</span> such that the linear map <span class="math notranslate nohighlight">\(\mathcal{A}(u)\)</span> equals the zero element in co-domain <span class="math notranslate nohighlight">\(V\)</span>. We often call the null space <strong>the kernel of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span></strong>.</p>
-<blockquote>
-<div><p><strong>Theorem</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Theorem</p>
 <p>The range space of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a subspace of co-domain <span class="math notranslate nohighlight">\(V\)</span>; the null space of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is a subspace of the domain <span class="math notranslate nohighlight">\(U\)</span>.</p>
-</div></blockquote>
-<blockquote>
-<div><p><strong>Theorem</strong>: Given <span class="math notranslate nohighlight">\(b \in V\)</span></p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p>Given <span class="math notranslate nohighlight">\(b \in V\)</span></p>
 <ol class="arabic simple">
 <li><p>If the linear equation <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span> has at least 1 solution, i.e. there is a <span class="math notranslate nohighlight">\(u\)</span> that satisfies <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span> <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> <span class="math notranslate nohighlight">\(b \in \mathcal{R}(\mathcal{A})\)</span></p></li>
 <li><p>If <span class="math notranslate nohighlight">\(b \in \mathcal{R}(\mathcal{A})\)</span>, then:<br />
 2.1. The linear equation <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span> has a <strong>unique</strong> solution <span class="math notranslate nohighlight">\(\leftrightarrow \mathcal{N}(\mathcal{A}) = \{\theta_u\}\)</span>. i.e. the only thing in the null space is the zero vector.<br />
 2.2. Let <span class="math notranslate nohighlight">\(x_0 \in U\)</span>  s.t. <span class="math notranslate nohighlight">\(\mathcal{A}(x_0) = b\)</span>, then <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b \leftrightarrow u - x_0 \in \mathcal{N}(\mathcal{A})\)</span></p></li>
 </ol>
-</div></blockquote>
+</div>
 <p>From the theorem we can see that there is a relationship between the size of the null space and the solution of the linear equation <span class="math notranslate nohighlight">\(\mathcal{A}(u) = b\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

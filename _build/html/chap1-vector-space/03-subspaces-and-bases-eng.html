@@ -165,6 +165,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="04-linear-maps-eng.html">4. Linear Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06-change-of-basis-eng.html">6. Change of Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00-exercise-eng.html">Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00-solution-eng.html">Solution</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chap2-vector-matrix-operation/00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -396,13 +398,14 @@ document.write(`
 <div class="section" id="subspaces">
 <h2><a class="toc-backref" href="#id2">Subspaces</a><a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h2>
 <p>Consider a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, consider a set <span class="math notranslate nohighlight">\(W \subseteq V\)</span>, is <span class="math notranslate nohighlight">\(W\)</span> a vector space? Meaning that, if we apply addition and scalar multiplication to elements of <span class="math notranslate nohighlight">\(W\)</span>, will be still be staying inside <span class="math notranslate nohighlight">\(W\)</span>? i.e. is <span class="math notranslate nohighlight">\(W\)</span> closed under vector addition and scalar multiplication?</p>
-<blockquote>
-<div><p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> if:</p>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p><span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> if:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(W \subseteq V\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(W\)</span> is closed under vector addition and scalar multiplication (defined for the parent space <span class="math notranslate nohighlight">\(V\)</span>) using the field associated <span class="math notranslate nohighlight">\(\mathbb{F}\)</span></p></li>
 </ol>
-</div></blockquote>
+</div>
 <p><strong>Example</strong>: Given a space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, any planes that go through the origin is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <p>Some properties to consider: If <span class="math notranslate nohighlight">\(W_1, W_2\)</span> are both subspaces of <span class="math notranslate nohighlight">\(V\)</span>, then:</p>
 <ol class="arabic simple">
@@ -413,11 +416,12 @@ document.write(`
 </div>
 <div class="section" id="linear-independence">
 <h2><a class="toc-backref" href="#id3">Linear independence</a><a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
-<blockquote>
-<div><p><strong>Definition</strong>: Given a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, given a set of vectors <span class="math notranslate nohighlight">\(\{v_1, v_2, \dots, v_p\}, v_i \in V\)</span>. This set of vectors is said to be <strong>linearly independent</strong> iff:</p>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p>Given a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, given a set of vectors <span class="math notranslate nohighlight">\(\{v_1, v_2, \dots, v_p\}, v_i \in V\)</span>. This set of vectors is said to be <strong>linearly independent</strong> iff:</p>
 <div class="math notranslate nohighlight">
 \[\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta \rightarrow \alpha_i = 0 (\alpha_i \in \mathbb{F})\]</div>
-</div></blockquote>
+</div>
 <p>This means that you cannot write any vector as a linear combination of other vectors:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -433,13 +437,14 @@ document.write(`
 </div>
 <div class="section" id="bases">
 <h2><a class="toc-backref" href="#id4">Bases</a><a class="headerlink" href="#bases" title="Permalink to this headline">#</a></h2>
-<blockquote>
-<div><p><strong>Definition</strong>: Define a set of vectors <span class="math notranslate nohighlight">\(B = \{b_1,, b_2, \dots, b_n\}\)</span>. This set of vectors is called a <strong>basis</strong> of <span class="math notranslate nohighlight">\(V\)</span> iff:</p>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p>Define a set of vectors <span class="math notranslate nohighlight">\(B = \{b_1,, b_2, \dots, b_n\}\)</span>. This set of vectors is called a <strong>basis</strong> of <span class="math notranslate nohighlight">\(V\)</span> iff:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(B\)</span> is linearly independent</p></li>
 </ol>
-</div></blockquote>
+</div>
 <p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span> means that for for any <span class="math notranslate nohighlight">\(v \in V\)</span>, we can write <span class="math notranslate nohighlight">\(v\)</span> as a linear combination of the basis elements. i.e.:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -447,9 +452,10 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
 \]</div>
 <p>This means that the set of basis has to be (1) big enough so that it can represent any vector in <span class="math notranslate nohighlight">\(V\)</span>, and that it is (2) small enough so that we do not include any redundant factors.</p>
 <p>From here, we define the coordinates of a vector <span class="math notranslate nohighlight">\(v \in V\)</span> as the set of scalars that multiply the basis elements to get the vector <span class="math notranslate nohighlight">\(v\)</span>:</p>
-<blockquote>
-<div><p><strong>Definition</strong>: For <span class="math notranslate nohighlight">\(v \in V\)</span>, <span class="math notranslate nohighlight">\(v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n\)</span> then <span class="math notranslate nohighlight">\(\alpha_i\)</span>, i = <span class="math notranslate nohighlight">\(1 \dots n\)</span> are called the coordinates of <span class="math notranslate nohighlight">\(v\)</span> w.r.t. <span class="math notranslate nohighlight">\(B\)</span>.</p>
-</div></blockquote>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p>For <span class="math notranslate nohighlight">\(v \in V\)</span>, <span class="math notranslate nohighlight">\(v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n\)</span> then <span class="math notranslate nohighlight">\(\alpha_i\)</span>, i = <span class="math notranslate nohighlight">\(1 \dots n\)</span> are called the coordinates of <span class="math notranslate nohighlight">\(v\)</span> w.r.t. <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can have an infinite number of basis for a vector space. However, the number of elements in any basis is constant. This is the <strong>dimension of the vector space</strong>.</p>

@@ -7,7 +7,10 @@ We now know what are linear maps, now let's look at how to represent those linea
 ## Definition
 First, let's look at a statement:
 
-> Any **linear** map between **finite dimensional vector spaces** can be represented as matrix multiplication.
+
+```{important}
+Any **linear** map between **finite dimensional vector spaces** can be represented as matrix multiplication.
+```
 
 There are two important pieces of information within this statement, that is:
 1. We are considering **linear map** only 
@@ -83,4 +86,7 @@ $\mathcal{A}(u) = v \not \leftrightarrow Au = v$ is correct if we use standard b
 ```
 
 Overall, the key takeaway is: 
-> The $j^\text{th}$ column of the matrix $A$ is $\mathcal{A}(u_j)$ expressed w.r.t the basis elements $\{v_i\}$
+
+```{important}
+The $j^\text{th}$ column of the matrix $A$ is $\mathcal{A}(u_j)$ expressed w.r.t the basis elements $\{v_i\}$
+```
