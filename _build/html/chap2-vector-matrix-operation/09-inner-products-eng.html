@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Subspaces and Bases &#8212; Introduction to Linear Systems</title>
+    <title>9. Inner Products &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -61,11 +61,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap1-vector-space/03-subspaces-and-bases-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/09-inner-products-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Linear Maps" href="04-linear-maps-eng.html" />
-    <link rel="prev" title="2. Fields and Vector Spaces" href="02-fields-and-vector-spaces-eng.html" />
+    <link rel="prev" title="8. Induced Norms" href="08-induced-norms-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,21 +157,21 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 1: Vector Space</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-functions-eng.html">1. Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Subspaces and Bases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-linear-maps-eng.html">4. Linear Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06-change-of-basis-eng.html">6. Change of Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00-exercise-eng.html">Exercise</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00-solution-eng.html">Solution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap1-vector-space/00-intro-eng.html">Chapter 1: Vector Space</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/01-functions-eng.html">1. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/03-subspaces-and-bases-eng.html">3. Subspaces and Bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/04-linear-maps-eng.html">4. Linear Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/05-matrix-rep-of-linear-map-eng.html">5. Matrix Representation of Linear Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/06-change-of-basis-eng.html">6. Change of Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/00-exercise-eng.html">Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/00-solution-eng.html">Solution</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chap2-vector-matrix-operation/00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/07-norms-eng.html">7. Norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/08-induced-norms-eng.html">8. Induced Norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/09-inner-products-eng.html">9. Inner Products</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="07-norms-eng.html">7. Norms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-induced-norms-eng.html">8. Induced Norms</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9. Inner Products</a></li>
 </ul>
 </li>
 </ul>
@@ -246,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap1-vector-space/03-subspaces-and-bases-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap2-vector-matrix-operation/09-inner-products-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -276,7 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap1-vector-space/03-subspaces-and-bases-eng.md" target="_blank"
+      <li><a href="../_sources/chap2-vector-matrix-operation/09-inner-products-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,9 +344,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -358,21 +355,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>3. Subspaces and Bases</h1>
+    <h1>9. Inner Products</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence">Linear independence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -382,85 +369,36 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="subspaces-and-bases">
-<h1>3. Subspaces and Bases<a class="headerlink" href="#subspaces-and-bases" title="Permalink to this headline">#</a></h1>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#subspaces" id="id1">Subspaces</a></p></li>
-<li><p><a class="reference internal" href="#linear-independence" id="id2">Linear independence</a></p></li>
-<li><p><a class="reference internal" href="#bases" id="id3">Bases</a></p></li>
-</ul>
-</div>
-<p>We know what is vector space, now we will follow along and discuss what is subspace, and an important characteristic of vector space in term of their bases element.</p>
-<div class="section" id="subspaces">
-<h2><a class="toc-backref" href="#id1">Subspaces</a><a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h2>
-<p>Consider a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, consider a set <span class="math notranslate nohighlight">\(W \subseteq V\)</span>, is <span class="math notranslate nohighlight">\(W\)</span> a vector space? Meaning that, if we apply addition and scalar multiplication to elements of <span class="math notranslate nohighlight">\(W\)</span>, will be still be staying inside <span class="math notranslate nohighlight">\(W\)</span>? i.e. is <span class="math notranslate nohighlight">\(W\)</span> closed under vector addition and scalar multiplication?</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="inner-products">
+<h1>9. Inner Products<a class="headerlink" href="#inner-products" title="Permalink to this headline">#</a></h1>
+<p>Let’s look at <strong>inner products</strong> and <strong>inner product space</strong>.</p>
 <div class="important admonition">
 <p class="admonition-title">Definition</p>
-<p><span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> if:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(W \subseteq V\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(W\)</span> is closed under vector addition and scalar multiplication (defined for the parent space <span class="math notranslate nohighlight">\(V\)</span>) using the field associated <span class="math notranslate nohighlight">\(\mathbb{F}\)</span></p></li>
-</ol>
-</div>
-<p><strong>Example</strong>: Given a space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, any planes that go through the origin is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<p>Some properties to consider: If <span class="math notranslate nohighlight">\(W_1, W_2\)</span> are both subspaces of <span class="math notranslate nohighlight">\(V\)</span>, then:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(W_1 \cap W_2\)</span> is a subspace</p></li>
-<li><p><span class="math notranslate nohighlight">\(W_1 \cup W_2\)</span> is not necessarily a subspace</p></li>
-</ol>
-<p>An example of this is if we consider the space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, if <span class="math notranslate nohighlight">\(W_1\)</span> is the x-axis, <span class="math notranslate nohighlight">\(W_2\)</span> is the y-axis, then their union is just 2 lines, but the addition of an element from <span class="math notranslate nohighlight">\(W_1\)</span> and an element from <span class="math notranslate nohighlight">\(W_2\)</span> belongs to the plane Oxy, which is not the same as the union of the 2 axes.</p>
-</div>
-<div class="section" id="linear-independence">
-<h2><a class="toc-backref" href="#id2">Linear independence</a><a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Definition</p>
-<p>Given a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span>, given a set of vectors <span class="math notranslate nohighlight">\(\{v_1, v_2, \dots, v_p\}, v_i \in V\)</span>. This set of vectors is said to be <strong>linearly independent</strong> iff:</p>
-<div class="math notranslate nohighlight">
-\[\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta \rightarrow \alpha_i = 0 (\alpha_i \in \mathbb{F})\]</div>
-</div>
-<p>This means that you cannot write any vector as a linear combination of other vectors:</p>
+<p>Let the field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> be <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>, and consider the linear space <span class="math notranslate nohighlight">\((H, \mathbb{F})\)</span>. The function:</p>
 <div class="math notranslate nohighlight">
 \[
--\alpha_1 v_1 \neq \alpha_2 v_2 + \dots + \alpha_p v_p, \alpha_i \neq 0
+\langle\cdot,\cdot\rangle: H \times H \rightarrow \mathbb{F}
 \]</div>
-<p>Conversely, the set of vectors is said to be <strong>linearly dependent</strong> iff <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \dots, \alpha_p\)</span> not all 0, and:</p>
-<div class="math notranslate nohighlight">
-\[
-\alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_p v_p = \theta
-\]</div>
-<p>This means that if the set of vectors is linear dependent, you can write one or some of those vectors as a linear combination of other vectors. This also means that <strong>those vectors are redundant</strong>.</p>
-<p>From the definition of linear independence, we define the basis set.</p>
-</div>
-<div class="section" id="bases">
-<h2><a class="toc-backref" href="#id3">Bases</a><a class="headerlink" href="#bases" title="Permalink to this headline">#</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Definition</p>
-<p>Define a set of vectors <span class="math notranslate nohighlight">\(B = \{b_1,, b_2, \dots, b_n\}\)</span>. This set of vectors is called a <strong>basis</strong> of <span class="math notranslate nohighlight">\(V\)</span> iff:</p>
+<p>is called an <strong>inner product</strong> if, for each <span class="math notranslate nohighlight">\(x, y, z \in H\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{F}\)</span>:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(B\)</span> is linearly independent</p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle x, y+z\rangle = \langle x, y\rangle + \langle x, z\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle x, \alpha y\rangle = \alpha \langle x, y\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|x|^2 \equiv \langle x, x\rangle &gt; 0\)</span> <em>iff</em> <span class="math notranslate nohighlight">\(x \neq \theta_H\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\langle x, y\rangle = \overline{\langle y, x\rangle}\)</span></p></li>
 </ol>
 </div>
-<p><span class="math notranslate nohighlight">\(B\)</span> spans <span class="math notranslate nohighlight">\(V\)</span> means that for for any <span class="math notranslate nohighlight">\(v \in V\)</span>, we can write <span class="math notranslate nohighlight">\(v\)</span> as a linear combination of the basis elements. i.e.:</p>
-<div class="math notranslate nohighlight">
-\[
-v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
-\]</div>
-<p>This means that the set of basis has to be (1) big enough so that it can represent any vector in <span class="math notranslate nohighlight">\(V\)</span>, and that it is (2) small enough so that we do not include any redundant factors.</p>
-<p>From here, we define the coordinates of a vector <span class="math notranslate nohighlight">\(v \in V\)</span> as the set of scalars that multiply the basis elements to get the vector <span class="math notranslate nohighlight">\(v\)</span>:</p>
 <div class="important admonition">
 <p class="admonition-title">Definition</p>
-<p>For <span class="math notranslate nohighlight">\(v \in V\)</span>, <span class="math notranslate nohighlight">\(v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n\)</span> then <span class="math notranslate nohighlight">\(\alpha_i\)</span>, i = <span class="math notranslate nohighlight">\(1 \dots n\)</span> are called the coordinates of <span class="math notranslate nohighlight">\(v\)</span> w.r.t. <span class="math notranslate nohighlight">\(B\)</span>.</p>
-</div>
+<p>A complete inner product space is known as a <em>Hilbert space</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can have an infinite number of basis for a vector space. However, the number of elements in any basis is constant. This is the <strong>dimension of the vector space</strong>.</p>
+<p>The completeness definition here refers to the fact that every Cauchy sequence in the space must converge.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Once you have chosen the basis, the set of coordinates is unique for that basis. This means that given a basis, any vector in the space is uniquely defined by its coordinate.</p>
 </div>
+<p>A vector <span class="math notranslate nohighlight">\(v \in H\)</span> that satisfies <span class="math notranslate nohighlight">\(|v| = \langle v, v\rangle = 1\)</span> is said to be a <em>unit vector</em>.</p>
+<div class="note admonition">
+<p class="admonition-title">Remark</p>
+<p>Inner products allow us to define orthogonality of vectors and discuss angles between vectors.</p>
 </div>
 </div>
 
@@ -477,7 +415,7 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
         },
         kernelOptions: {
             name: "python3",
-            path: "./chap1-vector-space"
+            path: "./chap2-vector-matrix-operation"
         },
         predefinedOutput: true
     }
@@ -493,22 +431,13 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02-fields-and-vector-spaces-eng.html"
+       href="08-induced-norms-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2. Fields and Vector Spaces</p>
+        <p class="prev-next-title">8. Induced Norms</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="04-linear-maps-eng.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. Linear Maps</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -516,22 +445,6 @@ v = \alpha_1 b_1 + \alpha_2 b_2 + \dots + \alpha_n b_n
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subspaces">Subspaces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-independence">Linear independence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
