@@ -82,4 +82,5 @@ $$m_l ||v||_a \le |v||_b \le m_u |v||_a$$
 From here, we have some nice relationships
 
 **Example**: Given a vector $x \in \mathbb{R}^n$: 
+
 $$||x||_\infty \le ||x||_1 \le n ||x||_\infty$$
