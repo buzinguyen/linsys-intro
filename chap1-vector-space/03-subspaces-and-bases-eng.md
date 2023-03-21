@@ -1,5 +1,6 @@
 # 3. Subspaces and Bases
 ```{contents}
+:local:
 ```
 We know what is vector space, now we will follow along and discuss what is subspace, and an important characteristic of vector space in term of their bases element.
 

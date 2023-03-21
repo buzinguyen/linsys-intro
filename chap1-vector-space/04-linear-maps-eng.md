@@ -1,5 +1,6 @@
 # 4. Linear Maps
 ```{contents}
+:local:
 ```
 ## Maps between vector spaces
 Define 2 vector spaces $(V, \mathbb{F})$ and $(W, \mathbb{F})$. Define the map $\mathcal{A}$ that takes the element of $V$ to element of $W$.

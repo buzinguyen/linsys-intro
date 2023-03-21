@@ -1,5 +1,6 @@
 # 2. Fields and Vector Spaces
 ```{contents}
+:local:
 ```
 ## Fields
 **What is a field?** A field $\mathbb{F}$, denotes $(\mathbb{F}, +, \cdot)$, is a set of objects/elements and 2 binary operations: multiplication ($\cdot$) and addition ($+$). The following also has to be satisfied:
