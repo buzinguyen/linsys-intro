@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Norms &#8212; Introduction to Linear Systems</title>
+    <title>8. Induced Norms &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -61,11 +61,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/07-norms-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/08-induced-norms-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Induced Norms" href="08-induced-norms-eng.html" />
-    <link rel="prev" title="Chapter 2: Vector and Matrix Operation" href="00-intro-eng.html" />
+    <link rel="prev" title="7. Norms" href="07-norms-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -170,8 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7. Norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="08-induced-norms-eng.html">8. Induced Norms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-norms-eng.html">7. Norms</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8. Induced Norms</a></li>
 </ul>
 </li>
 </ul>
@@ -245,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap2-vector-matrix-operation/07-norms-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap2-vector-matrix-operation/08-induced-norms-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap2-vector-matrix-operation/07-norms-eng.md" target="_blank"
+      <li><a href="../_sources/chap2-vector-matrix-operation/08-induced-norms-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>7. Norms</h1>
+    <h1>8. Induced Norms</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -368,11 +367,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-norm">Properties of norm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space">Norms for vector space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space-with-matrices">Norms for vector space with matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-function-space">Norms for function space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-between-norms">Relations between norms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concrete-forms-of-induced-norms">Concrete forms of induced norms</a></li>
 </ul>
             </nav>
         </div>
@@ -384,103 +379,103 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="norms">
-<h1>7. Norms<a class="headerlink" href="#norms" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="induced-norms">
+<h1>8. Induced Norms<a class="headerlink" href="#induced-norms" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#definition" id="id1">Definition</a></p></li>
-<li><p><a class="reference internal" href="#properties-of-norm" id="id2">Properties of norm</a></p></li>
-<li><p><a class="reference internal" href="#norms-for-vector-space" id="id3">Norms for vector space</a></p></li>
-<li><p><a class="reference internal" href="#norms-for-vector-space-with-matrices" id="id4">Norms for vector space with matrices</a></p></li>
-<li><p><a class="reference internal" href="#norms-for-function-space" id="id5">Norms for function space</a></p></li>
-<li><p><a class="reference internal" href="#relations-between-norms" id="id6">Relations between norms</a></p></li>
+<li><p><a class="reference internal" href="#concrete-forms-of-induced-norms" id="id2">Concrete forms of induced norms</a></p></li>
 </ul>
 </div>
+<p>We will look at induced norms, i.e. norms that are induced by some function operations.</p>
 <div class="section" id="definition">
 <h2><a class="toc-backref" href="#id1">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<p>Let’s look at the concept of <strong>norms</strong> and <strong>normed vector spaces</strong>.</p>
 <div class="important admonition">
 <p class="admonition-title">Definition</p>
-<p>A norm is <strong>a special map</strong> between vector spaces which takes element from a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span> and maps those elements to the positive real line <span class="math notranslate nohighlight">\(\mathbb{R}_{+}\)</span></p>
+<p>Consider <span class="math notranslate nohighlight">\(\mathcal{A}: (U, \mathbb{F}) \rightarrow (V, \mathbb{F})\)</span> a map from 1 vector space to another over the same field. We also require <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> to be linear and continuous. Suppose <span class="math notranslate nohighlight">\(U, V\)</span> are all normed vector spaces, with associated norms <span class="math notranslate nohighlight">\(||\cdot||_u\)</span> and <span class="math notranslate nohighlight">\(||\cdot||_v\)</span>. We define the induced norm of the map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> as follows:</p>
 <div class="math notranslate nohighlight">
 \[
-||\cdot|| : (V, \mathbb{F}) \rightarrow \mathbb{R}_+
+||\mathcal{A}||_i = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_v}{||u||_u}
 \]</div>
-</div>
-<p>We call a normed vector space is a vector space which has a norm defined on it.</p>
-<div class="important admonition">
-<p class="admonition-title">Definition</p>
-<p>A normed vector space is a vector space which has a norm defined on it.</p>
-</div>
-</div>
-<div class="section" id="properties-of-norm">
-<h2><a class="toc-backref" href="#id2">Properties of norm</a><a class="headerlink" href="#properties-of-norm" title="Permalink to this headline">#</a></h2>
-<p>A norm <span class="math notranslate nohighlight">\(||\cdot||\)</span> that maps <span class="math notranslate nohighlight">\(V \rightarrow \mathbb{R}_+\)</span> satisfies the following properties:</p>
-<ul>
-<li><p><strong>Triangle property</strong>:
-$<span class="math notranslate nohighlight">\(
-  || v_1 + v_2 || \le ||v_1|| + ||v_2|| \forall v_1, v_2 \in V
-  \)</span>$</p></li>
-<li><p><span class="math notranslate nohighlight">\(||\alpha v|| = |\alpha| ||v||\)</span></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>As the normed vector space <span class="math notranslate nohighlight">\(V\)</span> has the associated field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, the value of <span class="math notranslate nohighlight">\(|\alpha|\)</span> depends on <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. If <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is real number, then <span class="math notranslate nohighlight">\(|\alpha|\)</span> is absolute value. Else if <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is field of complex number (<span class="math notranslate nohighlight">\(\mathbb{C}\)</span>) then <span class="math notranslate nohighlight">\(|\alpha|\)</span> will be the magnitude of the complex number.</p>
-</div>
-</li>
-<li><p><span class="math notranslate nohighlight">\(||v|| = 0 \leftrightarrow v = \theta_v\)</span></p></li>
-</ul>
-<div class="note admonition">
-<p class="admonition-title">Remark</p>
-<p>A norm has to satisfy the above properties. Thus to check if a candidate norm is in fact a norm, we can check to see if it satifies all the above properties.</p>
+<p>The <span class="math notranslate nohighlight">\(i\)</span> in <span class="math notranslate nohighlight">\(||\mathcal{A}||_i\)</span> stands for induced norm.</p>
 </div>
 </div>
-<div class="section" id="norms-for-vector-space">
-<h2><a class="toc-backref" href="#id3">Norms for vector space</a><a class="headerlink" href="#norms-for-vector-space" title="Permalink to this headline">#</a></h2>
-<p><strong>Example</strong>: Given the normed vector space <span class="math notranslate nohighlight">\((\mathbb{F}^n, \mathbb{F})\)</span></p>
+<p><em>How to intuitively understand this?</em> The induced norm gives us a sense (a measure) of the action of the linear operator by measuring the action of the operator on all vectors <span class="math notranslate nohighlight">\(u \in U \text{s.t} u \neq \theta\)</span> and then take a supremum of all the measures. Notice that we are having <span class="math notranslate nohighlight">\(||\mathcal{A}u||_v\)</span> w.r.t the norm in <span class="math notranslate nohighlight">\(V\)</span>. Think of this like:</p>
 <ul class="simple">
-<li><p>The 1-norm: <span class="math notranslate nohighlight">\(||x||_1 = \Sigma_{i=1}^{n} |x_i|\)</span></p></li>
-<li><p>The 2-norm: <span class="math notranslate nohighlight">\(||x||_2 = (\Sigma_{i=1}^{n} |x_i|^2)^{\frac{1}{2}}\)</span></p></li>
-<li><p>The p-norm: <span class="math notranslate nohighlight">\(||x||_p = (\Sigma_{i=1}^{n} |x_i|^p)^{\frac{1}{p}}\)</span></p></li>
-<li><p>The <span class="math notranslate nohighlight">\(\infty\)</span>-norm: <span class="math notranslate nohighlight">\(||x||_\infty = \max_{i} |x_i|\)</span></p></li>
+<li><p>Apply the mapping (operator) <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> onto <span class="math notranslate nohighlight">\(u\)</span> then measure the result using measurement from <span class="math notranslate nohighlight">\(V\)</span>, i.e. ||\mathcal{A}u||_v</p></li>
+<li><p>For each of those measurement, divide it by original measure (before operation) measured in <span class="math notranslate nohighlight">\(U\)</span>, i.e. <span class="math notranslate nohighlight">\(||u||_u\)</span></p></li>
+<li><p>Take the supremum of all of these, then we get the overall sense of how the operator acts.</p></li>
 </ul>
-<p>These are the norms that we use frequently in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
-<p><em>How about vector space with matrices?</em> We can construct norms from those matrices:</p>
+<p>On another note, we are only writing the definition of induced norm by <span class="math notranslate nohighlight">\(||\cdot||_u, ||\cdot||_v\)</span> which stand for norms in <span class="math notranslate nohighlight">\(U, V\)</span> without specifically specify which norms are they. It means that we can choose any norms available within normed vector space <span class="math notranslate nohighlight">\(U, V\)</span> to use here in order to calculate the induced norm <span class="math notranslate nohighlight">\(||\cdot||_i\)</span>.</p>
+<p><strong>Example</strong>: Define the induced 1-norm as <span class="math notranslate nohighlight">\(||\mathcal{A}||_{1,i}\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[
+||\mathcal{A}||_{1,i} = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_1}{||u||_1}
+\]</div>
+<p>Similarly, for the induced 2-norm:</p>
+<div class="math notranslate nohighlight">
+\[
+||\mathcal{A}||_{2,i} = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_2}{||u||_2}
+\]</div>
+<!-- We see the definition of induced norm on the linear operator $\mathcal{A}$. How will this affect the matrix representation of $\mathcal{A}$?  -->
 </div>
-<div class="section" id="norms-for-vector-space-with-matrices">
-<h2><a class="toc-backref" href="#id4">Norms for vector space with matrices</a><a class="headerlink" href="#norms-for-vector-space-with-matrices" title="Permalink to this headline">#</a></h2>
-<p><strong>Example</strong>: Consider matrix <span class="math notranslate nohighlight">\(A \in \mathbb{F}^{m \times n}\)</span></p>
-<ul class="simple">
-<li><p>The a-norm: <span class="math notranslate nohighlight">\(||A||_a = \Sigma_{i=1}^{m} \Sigma_{j=1}^{n} |a_{ij}|\)</span></p></li>
-<li><p>The Frobenius norm: <span class="math notranslate nohighlight">\(||A||_F = (\Sigma_{i=1}^{m} \Sigma_{j=1}^{n} |a_{ij}|^2)^{\frac{1}{2}}\)</span></p></li>
-<li><p>The b-norm: <span class="math notranslate nohighlight">\(||A||_b = \max_{i \in \{1 \dots m\}, j \in \{1 \dots n\}} |a_{ij}|\)</span></p></li>
-</ul>
-<p>Though we do not use these norms so much. In linear systems, we tend to use another definition of norm called the <strong>induced norm</strong>, which will be discussed later.</p>
-<p><em>What about function space? Can we have norms for function space?</em></p>
-</div>
-<div class="section" id="norms-for-function-space">
-<h2><a class="toc-backref" href="#id5">Norms for function space</a><a class="headerlink" href="#norms-for-function-space" title="Permalink to this headline">#</a></h2>
-<p><strong>Example</strong>: Given functions <span class="math notranslate nohighlight">\(f(\cdot) \in C([t_0, t_1], \mathbb{F}^n)\)</span> (<span class="math notranslate nohighlight">\(C\)</span> stands for continuous function). Possible norms are:</p>
+<div class="section" id="concrete-forms-of-induced-norms">
+<h2><a class="toc-backref" href="#id2">Concrete forms of induced norms</a><a class="headerlink" href="#concrete-forms-of-induced-norms" title="Permalink to this headline">#</a></h2>
+<p>Given the operator <span class="math notranslate nohighlight">\(\mathcal{A}: \mathbb{F}^n \rightarrow \mathbb{F}^m\)</span>. Write the induced <span class="math notranslate nohighlight">\(p\)</span>-norm as <span class="math notranslate nohighlight">\(||A||_{p, i}\)</span> with <span class="math notranslate nohighlight">\(p\)</span> representing the type of norm that we are choosing. The induced <span class="math notranslate nohighlight">\(p\)</span>-norm on the operator <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+||\mathcal{A}||_{p,i} = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_p}{||u||_p}
+\]</div>
+<p>Let’s look at some of the matrix norms (induced norms) that we usually use, and their concrete forms.</p>
+<p><strong>Example</strong>:</p>
 <ul>
-<li><p>The 1-norm (<strong>the <span class="math notranslate nohighlight">\(L_1\)</span> norm for functions</strong>): <span class="math notranslate nohighlight">\(||f||_1 = \int_{t_0}^{t_1} ||f(t)|| dt\)</span>.</p>
-<p>Here interestingly, the norm <span class="math notranslate nohighlight">\(||f_1||\)</span> inside the integral does not have to be the 1-norm, but it can rather be any of the norm that we have previously discussed.</p>
+<li><p>Given the induced 1-norm <span class="math notranslate nohighlight">\(||\mathcal{A}||_{1,i}\)</span>, we can show the following</p>
+<div class="math notranslate nohighlight">
+\[
+    ||\mathcal{A}||_{1,i} = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_1}{||u||_1} = \max_{j \in \{1 \dots n\}}\{\Sigma_{i=1}^{m}|a_{ij}|\}
+    \]</div>
+<p>This is called the <strong>max column sum</strong>.</p>
 </li>
-<li><p>The 2-norm (<strong>the <span class="math notranslate nohighlight">\(L_2\)</span> norm for functions</strong>): <span class="math notranslate nohighlight">\(||f||_2 = (\int_{t_0}^{t_1} ||f(t)||^2 dt) ^ \frac{1}{2}\)</span></p></li>
-<li><p>The <span class="math notranslate nohighlight">\(\infty\)</span>-norm: <span class="math notranslate nohighlight">\(||f||_\infty = \max \{||f(t)||, t \in [t_0, t_1]\}\)</span></p></li>
+<li><p>Given the induced 2-norm <span class="math notranslate nohighlight">\(||\mathcal{A}||_{2,i}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+    ||\mathcal{A}||_{2,i} = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_2}{||u||_2} = \max_{j \in \{1 \dots n\}}\{\lambda_i(A^*A)\} ^ \frac{1}{2}
+    \]</div>
+<p>With <span class="math notranslate nohighlight">\(A^*\)</span> the conjugate transpose of <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(\lambda_i(\cdot)\)</span> the <span class="math notranslate nohighlight">\(i^{\text{th}}\)</span> eigenvalue (<span class="math notranslate nohighlight">\(A^* A\)</span> is a squared matrix).</p>
+</li>
+<li><p>Given the induced <span class="math notranslate nohighlight">\(\infty\)</span>-norm <span class="math notranslate nohighlight">\(||\mathcal{A}||_{\infty,i}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+    ||\mathcal{A}||_{\infty,i} = \sup_{u \neq \theta} \frac{||\mathcal{A}u||_\infty}{||u||_\infty} = \max_{i \in \{1 \dots m\}}\{\Sigma_{j=1}^{n} | a_{ij}|\}
+    \]</div>
+<p>This is called the <strong>max row sum</strong>.</p>
+</li>
 </ul>
-</div>
-<div class="section" id="relations-between-norms">
-<h2><a class="toc-backref" href="#id6">Relations between norms</a><a class="headerlink" href="#relations-between-norms" title="Permalink to this headline">#</a></h2>
-<p>If we have a vector that is finite in 1 norm, do we know anything about this vector in another norm?</p>
+<p>Let’s now try to prove that those concrete forms are actually induced from the definition w.r.t the norms that we are using.</p>
+<p><strong>Proof</strong>: Induced 1-norm</p>
 <div class="note admonition">
-<p class="admonition-title">Remark: Equivalence of norms</p>
-<p>Two norms <span class="math notranslate nohighlight">\(||\cdot||_a, ||\cdot||_b\)</span> on <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span> are said to be equivalent if one can be bounded with respect to another. We write this as <span class="math notranslate nohighlight">\(\exists m_l, m_u \in \mathbb{R}_+\)</span> s.t</p>
+<p class="admonition-title">Remark: The 1-norm</p>
+<p>Given the vector space <span class="math notranslate nohighlight">\(\mathbb{F}^n\)</span>, given the vector <span class="math notranslate nohighlight">\(x \in \mathbb{F}^n\)</span> the 1-norm is:</p>
 <div class="math notranslate nohighlight">
-\[m_l ||v||_a \le |v||_b \le m_u |v||_a\]</div>
+\[||x||_1 = \Sigma_{i=1}^{n} |x_i|\]</div>
 </div>
-<p>From here, we have some nice relationships</p>
-<p><strong>Example</strong>: Given a vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>:</p>
+<p>From the definition of induced <span class="math notranslate nohighlight">\(p\)</span>-norm applied for 1-norm, we have the induced 1-norm:</p>
 <div class="math notranslate nohighlight">
-\[||x||_\infty \le ||x||_1 \le n ||x||_\infty\]</div>
+\[\begin{split}
+\begin{align*}
+    ||\mathcal{A}||_{1,i} &amp;= \sup_{x \neq \theta} \frac{||\mathcal{A}x||_1}{||x||_1} \\
+    &amp;= \sup_{x \neq \theta} \frac{\Sigma_{i=1}^{m} |(\mathcal{A}x)_i|}{\Sigma_{i=1}^{n} |x_i|} &amp;&amp; \text{$\mathcal{A}: \mathbb{F}^n \rightarrow \mathbb{F}^m$, $x \in \mathbb{F}^n$} \\
+    &amp; &amp;&amp; \rightarrow \mathcal{A}x \in \mathbb{F}^m \text{ i.e. $\mathcal{A}x$ has dimension $m \times 1$} \\
+    &amp;= \sup_{x \neq \theta} \frac{\Sigma_{i=1}^{m} |\Sigma_{j=1}^{n}a_{ij}x_j|}{\Sigma_{i=1}^{n} |x_i|} \\
+    &amp;\le \sup_{x \neq \theta} \frac{\Sigma_{i=1}^{m} \Sigma_{j=1}^{n}|a_{ij}||x_j|}{\Sigma_{i=1}^{n} |x_i|} \\
+    &amp;= \sup_{x \neq \theta} \frac{\Sigma_{j=1}^{n}(|x_j|\Sigma_{i=1}^{m} |a_{ij}|)}{\Sigma_{i=1}^{n} |x_i|} \\
+    &amp;= \dots \\
+    &amp;\le \max_{j \in \{1 \dots n\}}\{\Sigma_{i=1}^{m}|a_{ij}|\}
+\end{align*}
+\end{split}\]</div>
+<p>From here, we have that <span class="math notranslate nohighlight">\(||\mathcal{A}||_{1,i} \le \max_{j \in \{1 \dots n\}}\{\Sigma_{i=1}^{m}|a_{ij}|\}\)</span>, not an equality. But the derivation so far is w.r.t the choice of vector <span class="math notranslate nohighlight">\(x\)</span>. If we can choose a vector <span class="math notranslate nohighlight">\(x\)</span> s.t the value of <span class="math notranslate nohighlight">\(x = \begin{bmatrix}0 &amp; 0 &amp; \dots &amp; 1 &amp; \dots &amp; 0 &amp; 0\end{bmatrix}^\intercal\)</span> with the index of value <span class="math notranslate nohighlight">\(1\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is the index of the maximum column sum of <span class="math notranslate nohighlight">\(A\)</span>, then from the inequality we achieve the equality.</p>
 </div>
 </div>
 
@@ -513,22 +508,13 @@ $<span class="math notranslate nohighlight">\(
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="00-intro-eng.html"
+       href="07-norms-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Chapter 2: Vector and Matrix Operation</p>
+        <p class="prev-next-title">7. Norms</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="08-induced-norms-eng.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">8. Induced Norms</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -546,11 +532,7 @@ $<span class="math notranslate nohighlight">\(
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-norm">Properties of norm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space">Norms for vector space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space-with-matrices">Norms for vector space with matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-function-space">Norms for function space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-between-norms">Relations between norms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concrete-forms-of-induced-norms">Concrete forms of induced norms</a></li>
 </ul>
   </nav></div>
 

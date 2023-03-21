@@ -8,7 +8,7 @@ Let's look at the concept of **norms** and **normed vector spaces**.
 
 ```{admonition} Definition
 :class: important
-A norm is a special map between vector spaces which takes element from a vector space $(V, \mathbb{F})$ and maps those elements to the positive real line $\mathbb{R}_{+}$
+A norm is **a special map** between vector spaces which takes element from a vector space $(V, \mathbb{F})$ and maps those elements to the positive real line $\mathbb{R}_{+}$
 
 $$
 ||\cdot|| : (V, \mathbb{F}) \rightarrow \mathbb{R}_+
