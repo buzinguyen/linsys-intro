@@ -59,6 +59,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/07-norms-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -340,7 +342,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -356,6 +360,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-norm">Properties of norm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space">Norms for vector space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space-with-matrices">Norms for vector space with matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-function-space">Norms for function space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-between-norms">Relations between norms</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -367,6 +384,101 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="norms">
 <h1>7. Norms<a class="headerlink" href="#norms" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition" id="id1">Definition</a></p></li>
+<li><p><a class="reference internal" href="#properties-of-norm" id="id2">Properties of norm</a></p></li>
+<li><p><a class="reference internal" href="#norms-for-vector-space" id="id3">Norms for vector space</a></p></li>
+<li><p><a class="reference internal" href="#norms-for-vector-space-with-matrices" id="id4">Norms for vector space with matrices</a></p></li>
+<li><p><a class="reference internal" href="#norms-for-function-space" id="id5">Norms for function space</a></p></li>
+<li><p><a class="reference internal" href="#relations-between-norms" id="id6">Relations between norms</a></p></li>
+</ul>
+</div>
+<div class="section" id="definition">
+<h2><a class="toc-backref" href="#id1">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<p>Let’s look at the concept of <strong>norms</strong> and <strong>normed vector spaces</strong>.</p>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p>A norm is a special map between vector spaces which takes element from a vector space <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span> and maps those elements to the positive real line <span class="math notranslate nohighlight">\(\mathbb{R}_{+}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+||\cdot|| : (V, \mathbb{F}) \rightarrow \mathbb{R}_+
+\]</div>
+</div>
+<p>We call a normed vector space is a vector space which has a norm defined on it.</p>
+<div class="important admonition">
+<p class="admonition-title">Definition</p>
+<p>A normed vector space is a vector space which has a norm defined on it.</p>
+</div>
+</div>
+<div class="section" id="properties-of-norm">
+<h2><a class="toc-backref" href="#id2">Properties of norm</a><a class="headerlink" href="#properties-of-norm" title="Permalink to this headline">#</a></h2>
+<p>A norm <span class="math notranslate nohighlight">\(||\cdot||\)</span> that maps <span class="math notranslate nohighlight">\(V \rightarrow \mathbb{R}_+\)</span> satisfies the following properties:</p>
+<ul>
+<li><p><strong>Triangle property</strong>:
+$<span class="math notranslate nohighlight">\(
+  || v_1 + v_2 || \le ||v_1|| + ||v_2|| \forall v_1, v_2 \in V
+  \)</span>$</p></li>
+<li><p><span class="math notranslate nohighlight">\(||\alpha v|| = |\alpha| ||v||\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As the normed vector space <span class="math notranslate nohighlight">\(V\)</span> has the associated field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, the value of <span class="math notranslate nohighlight">\(|\alpha|\)</span> depends on <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. If <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is real number, then <span class="math notranslate nohighlight">\(|\alpha|\)</span> is absolute value. Else if <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> is field of complex number (<span class="math notranslate nohighlight">\(\mathbb{C}\)</span>) then <span class="math notranslate nohighlight">\(|\alpha|\)</span> will be the magnitude of the complex number.</p>
+</div>
+</li>
+<li><p><span class="math notranslate nohighlight">\(||v|| = 0 \leftrightarrow v = \theta_v\)</span></p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Remark</p>
+<p>A norm has to satisfy the above properties. Thus to check if a candidate norm is in fact a norm, we can check to see if it satifies all the above properties.</p>
+</div>
+</div>
+<div class="section" id="norms-for-vector-space">
+<h2><a class="toc-backref" href="#id3">Norms for vector space</a><a class="headerlink" href="#norms-for-vector-space" title="Permalink to this headline">#</a></h2>
+<p><strong>Example</strong>: Given the normed vector space <span class="math notranslate nohighlight">\((\mathbb{F}^n, \mathbb{F})\)</span></p>
+<ul class="simple">
+<li><p>The 1-norm: <span class="math notranslate nohighlight">\(||x||_1 = \Sigma_{i=1}^{n} |x_i|\)</span></p></li>
+<li><p>The 2-norm: <span class="math notranslate nohighlight">\(||x||_2 = (\Sigma_{i=1}^{n} |x_i|^2)^{\frac{1}{2}}\)</span></p></li>
+<li><p>The p-norm: <span class="math notranslate nohighlight">\(||x||_p = (\Sigma_{i=1}^{n} |x_i|^p)^{\frac{1}{p}}\)</span></p></li>
+<li><p>The <span class="math notranslate nohighlight">\(\infty\)</span>-norm: <span class="math notranslate nohighlight">\(||x||_\infty = \max_{i} |x_i|\)</span></p></li>
+</ul>
+<p>These are the norms that we use frequently in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+<p><em>How about vector space with matrices?</em> We can construct norms from those matrices:</p>
+</div>
+<div class="section" id="norms-for-vector-space-with-matrices">
+<h2><a class="toc-backref" href="#id4">Norms for vector space with matrices</a><a class="headerlink" href="#norms-for-vector-space-with-matrices" title="Permalink to this headline">#</a></h2>
+<p><strong>Example</strong>: Consider matrix <span class="math notranslate nohighlight">\(A \in \mathbb{F}^{m \times n}\)</span></p>
+<ul class="simple">
+<li><p>The a-norm: <span class="math notranslate nohighlight">\(||A||_a = \Sigma_{i=1}^{m} \Sigma_{j=1}^{n} |a_{ij}|\)</span></p></li>
+<li><p>The Frobenius norm: <span class="math notranslate nohighlight">\(||A||_F = (\Sigma_{i=1}^{m} \Sigma_{j=1}^{n} |a_{ij}|^2)^{\frac{1}{2}}\)</span></p></li>
+<li><p>The b-norm: <span class="math notranslate nohighlight">\(||A||_b = \max_{i \in \{1 \dots m\}, j \in \{1 \dots n\}} |a_{ij}|\)</span></p></li>
+</ul>
+<p>Though we do not use these norms so much. In linear systems, we tend to use another definition of norm called the <strong>induced norm</strong>, which will be discussed later.</p>
+<p><em>What about function space? Can we have norms for function space?</em></p>
+</div>
+<div class="section" id="norms-for-function-space">
+<h2><a class="toc-backref" href="#id5">Norms for function space</a><a class="headerlink" href="#norms-for-function-space" title="Permalink to this headline">#</a></h2>
+<p><strong>Example</strong>: Given functions <span class="math notranslate nohighlight">\(f(\cdot) \in C([t_0, t_1], \mathbb{F}^n)\)</span> (<span class="math notranslate nohighlight">\(C\)</span> stands for continuous function). Possible norms are:</p>
+<ul>
+<li><p>The 1-norm (<strong>the <span class="math notranslate nohighlight">\(L_1\)</span> norm for functions</strong>): <span class="math notranslate nohighlight">\(||f||_1 = \int_{t_0}^{t_1} ||f(t)|| dt\)</span>.</p>
+<p>Here interestingly, the norm <span class="math notranslate nohighlight">\(||f_1||\)</span> inside the integral does not have to be the 1-norm, but it can rather be any of the norm that we have previously discussed.</p>
+</li>
+<li><p>The 2-norm (<strong>the <span class="math notranslate nohighlight">\(L_2\)</span> norm for functions</strong>): <span class="math notranslate nohighlight">\(||f||_2 = (\int_{t_0}^{t_1} ||f(t)||^2 dt) ^ \frac{1}{2}\)</span></p></li>
+<li><p>The <span class="math notranslate nohighlight">\(\infty\)</span>-norm: <span class="math notranslate nohighlight">\(||f||_\infty = \max \{||f(t)||, t \in [t_0, t_1]\}\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="relations-between-norms">
+<h2><a class="toc-backref" href="#id6">Relations between norms</a><a class="headerlink" href="#relations-between-norms" title="Permalink to this headline">#</a></h2>
+<p>If we have a vector that is finite in 1 norm, do we know anything about this vector in another norm?</p>
+<div class="note admonition">
+<p class="admonition-title">Remark: Equivalence of norms</p>
+<p>Two norms <span class="math notranslate nohighlight">\(||\cdot||_a, ||\cdot||_b\)</span> on <span class="math notranslate nohighlight">\((V, \mathbb{F})\)</span> are said to be equivalent if one can be bounded with respect to another. We write this as <span class="math notranslate nohighlight">\(\exists m_l, m_u \in \mathbb{R}_+\)</span> s.t</p>
+<div class="math notranslate nohighlight">
+\[m_l ||v||_a \le |v||_b \le m_u |v||_a\]</div>
+</div>
+<p>From here, we have some nice relationships</p>
+<p><strong>Example</strong>: Given a vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>:
+$<span class="math notranslate nohighlight">\(||x||_\infty \le ||x||_1 \le n ||x||_\infty\)</span>$</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -412,6 +524,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-norm">Properties of norm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space">Norms for vector space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-vector-space-with-matrices">Norms for vector space with matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norms-for-function-space">Norms for function space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-between-norms">Relations between norms</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

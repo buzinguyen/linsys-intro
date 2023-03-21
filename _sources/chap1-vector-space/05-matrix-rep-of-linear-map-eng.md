@@ -1,5 +1,6 @@
 # 5. Matrix Representation of Linear Maps
 ```{contents}
+:local:
 ```
 
 We now know what are linear maps, now let's look at how to represent those linear maps as matrix multiplication.
