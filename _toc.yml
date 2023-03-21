@@ -19,3 +19,4 @@ parts:
     - file: chap2-vector-matrix-operation/00-intro-eng
       sections:
       - file: chap2-vector-matrix-operation/07-norms-eng
+      - file: chap2-vector-matrix-operation/08-induced-norms-eng

@@ -8,7 +8,7 @@ Let's look at the concept of **norms** and **normed vector spaces**.
 
 ```{admonition} Definition
 :class: important
-A norm is a special map between vector spaces which takes element from a vector space $(V, \mathbb{F})$ and maps those elements to the positive real line $\mathbb{R}_{+}$
+A norm is **a special map** between vector spaces which takes element from a vector space $(V, \mathbb{F})$ and maps those elements to the positive real line $\mathbb{R}_{+}$
 
 $$
 ||\cdot|| : (V, \mathbb{F}) \rightarrow \mathbb{R}_+
@@ -82,4 +82,5 @@ $$m_l ||v||_a \le |v||_b \le m_u |v||_a$$
 From here, we have some nice relationships
 
 **Example**: Given a vector $x \in \mathbb{R}^n$: 
+
 $$||x||_\infty \le ||x||_1 \le n ||x||_\infty$$
