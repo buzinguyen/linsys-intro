@@ -59,6 +59,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/11-hermitian-matrices-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -350,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -366,6 +370,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-adjoint-maps">Self-adjoint maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hermitian matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unitary-matrices">Unitary matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-values">Singular values</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -377,6 +392,57 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="hermitian-matrices">
 <h1>11. Hermitian Matrices<a class="headerlink" href="#hermitian-matrices" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#self-adjoint-maps" id="id2">Self-adjoint maps</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id3">Hermitian matrices</a></p></li>
+<li><p><a class="reference internal" href="#unitary-matrices" id="id4">Unitary matrices</a></p></li>
+<li><p><a class="reference internal" href="#singular-values" id="id5">Singular values</a></p></li>
+</ul>
+</div>
+<p>We now know the definition of adjoints. Let’s now look at self-adjoint maps</p>
+<div class="section" id="self-adjoint-maps">
+<h2><a class="toc-backref" href="#id2">Self-adjoint maps</a><a class="headerlink" href="#self-adjoint-maps" title="Permalink to this headline">#</a></h2>
+<p>Consider <span class="math notranslate nohighlight">\((H, \mathbb{F}, \langle\cdot,\cdot\rangle _H)\)</span>. Consider linear and continuous map <span class="math notranslate nohighlight">\(\mathcal{A}:H \rightarrow H\)</span>. Meaning that <span class="math notranslate nohighlight">\(\mathcal{A}^*:H\rightarrow H\)</span>. <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is self-adjoint if <span class="math notranslate nohighlight">\(\mathcal{A} = \mathcal{A}^*\)</span>. This also means that:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x, \mathcal{A}y \rangle = \langle \mathcal{A}x, y \rangle \; \forall x,y \in H
+\]</div>
+</div>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id3">Hermitian matrices</a><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{A} \simeq A = (a_{ij}), i, j \in 1\dots n\)</span>, with <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> the operator (map) and <span class="math notranslate nohighlight">\(A\)</span> the matrix representation <span class="math notranslate nohighlight">\(\in \mathbb{F}^{n\times n}\)</span>.</p>
+<p>The map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is self-adjoint iff <span class="math notranslate nohighlight">\(A\)</span> is hermitian, i.e. <span class="math notranslate nohighlight">\(A = A^*\)</span>. The <span class="math notranslate nohighlight">\(A^*\)</span> in matrix means complex conjugate transpose, i.e. \bar{a_{ji}}$.</p>
+<div class="note admonition">
+<p class="admonition-title">Remark</p>
+<p>Hermitian matrices always have real eigenvalues.</p>
+</div>
+</div>
+<div class="section" id="unitary-matrices">
+<h2><a class="toc-backref" href="#id4">Unitary matrices</a><a class="headerlink" href="#unitary-matrices" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Definition: Unitary matrix</p>
+<p>A matrix <span class="math notranslate nohighlight">\(U\)</span> is unitary iff</p>
+<div class="math notranslate nohighlight">
+\[
+U^*U = UU^* = I
+\]</div>
+</div>
+</div>
+<div class="section" id="singular-values">
+<h2><a class="toc-backref" href="#id5">Singular values</a><a class="headerlink" href="#singular-values" title="Permalink to this headline">#</a></h2>
+<p>Let us have the matrix <span class="math notranslate nohighlight">\(A \in \mathbb{C}^{m\times n}\)</span>. We will have <span class="math notranslate nohighlight">\(AA^* \in \mathbb{C}^{m\times m}\)</span> a square matrix. Let <span class="math notranslate nohighlight">\(\lambda_i , i=1\dots m\)</span> be the <em>eigenvalues</em> of <span class="math notranslate nohighlight">\(AA^*\)</span>. This also means that <span class="math notranslate nohighlight">\(\lambda_i\)</span> is real and non-negative.</p>
+<p>If we have <span class="math notranslate nohighlight">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_r \dots \ge \lambda_m\)</span>. If <span class="math notranslate nohighlight">\(r = \text{rank}(A) = \text{rank}(AA^*)\)</span>, then <span class="math notranslate nohighlight">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_r \ge 0\)</span> and all the remaining eigenvalues are all zeros.</p>
+<p>We define the <strong>singular values</strong> of the matrix to be the square root of the eigenvalues.</p>
+<div class="important admonition">
+<p class="admonition-title">Definition: Singular values</p>
+<p>The non-zero singular values of A are</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_i^\frac{1}{2}, i = 1\dots r
+\]</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -431,6 +497,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-adjoint-maps">Self-adjoint maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hermitian matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unitary-matrices">Unitary matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-values">Singular values</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
