@@ -16,7 +16,7 @@ $$
 $$
 ```
 
-In $\mathbb{R}^2$ or $\mathbb{R}^3, the inner product is the dot product. $In $\mathbb{R}^2$, a vector that is orthogonal to another vector is when it is perpendicular to the other vector. In these vector space, the inner product has an intuitive geometric intepretation. However, as we are generalizing this to *function space*, we need to refer back to the definition, that is $\langle x, y \rangle = 0$.
+In $\mathbb{R}^2$ or $\mathbb{R}^3$, the inner product is the dot product. In $\mathbb{R}^2$, a vector that is orthogonal to another vector is when it is perpendicular to the other vector. In these vector space, the inner product has an intuitive geometric intepretation. However, as we are generalizing this to *function space*, we need to refer back to the definition, that is $\langle x, y \rangle = 0$.
 
 With that definition of orthogonality, let's look at subspaces that are orthogonal to each other.
 

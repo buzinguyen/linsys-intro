@@ -24,6 +24,7 @@ Cuốn sách này được dựa trên rất nhiều nguồn tài liệu tham kh
 	* Linear Systems Theory: Second Edition của Joao Hespanha {cite}`hespanha2018linear`
 	* Modern Control Theory của Brogan Williams {cite}`brogan1991modern`
 	* Linear System Theory của Callier và Desoer {cite}`callier2012linear`
+	* Lecture Note on Control System Theory and Design của Tamer Basar {cite}`basar2020lecture`
 
 * Lý thuyết trò chơi
 	* Dynamic Noncooperative Game Theory, 2nd Edition của Tamer Basar {cite}`basar1998dynamicgametheory`
