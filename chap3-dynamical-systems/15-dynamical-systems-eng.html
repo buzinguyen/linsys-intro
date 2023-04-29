@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11. Hermitian Matrices &#8212; Introduction to Linear Systems</title>
+    <title>15. Dynamical systems &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap2-vector-matrix-operation/11-hermitian-matrices-eng';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap3-dynamical-systems/15-dynamical-systems-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. Singular Value Decomposition" href="12-singular-value-decomposition-eng.html" />
-    <link rel="prev" title="10. Adjoints" href="10-adjoints-eng.html" />
+    <link rel="next" title="Notes on feedback control" href="../notes/feedback-control-eng.html" />
+    <link rel="prev" title="14. Bellman-Gronwall lemma" href="14-Bellman-Gronwall-lemma-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">I. Linear algebra</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chap1-vector-space/00-intro-eng.html">Chapter 1: Vector Space</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/01-functions-eng.html">1. Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/02-fields-and-vector-spaces-eng.html">2. Fields and Vector Spaces</a></li>
@@ -169,24 +169,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../chap1-vector-space/00-solution-eng.html">Solution</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="07-norms-eng.html">7. Norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="08-induced-norms-eng.html">8. Induced Norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09-inner-products-eng.html">9. Inner Products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-adjoints-eng.html">10. Adjoints</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11. Hermitian Matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12-singular-value-decomposition-eng.html">12. Singular Value Decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00-exercise-eng.html">Exercise</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00-solution-eng.html">Solution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap2-vector-matrix-operation/00-intro-eng.html">Chapter 2: Vector and Matrix Operation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/07-norms-eng.html">7. Norms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/08-induced-norms-eng.html">8. Induced Norms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/09-inner-products-eng.html">9. Inner Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/10-adjoints-eng.html">10. Adjoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/11-hermitian-matrices-eng.html">11. Hermitian Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/12-singular-value-decomposition-eng.html">12. Singular Value Decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/00-exercise-eng.html">Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap2-vector-matrix-operation/00-solution-eng.html">Solution</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">II. Linear systems</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chap3-dynamical-systems/00-intro-eng.html">Chapter 3: Dynamical Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chap3-dynamical-systems/13-ode-theory-eng.html">13. Fundamental Theorum of ODEs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chap3-dynamical-systems/14-Bellman-Gronwall-lemma-eng.html">14. Bellman-Gronwall lemma</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chap3-dynamical-systems/15-dynamical-systems-eng.html">15. Dynamical systems</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 3: Dynamical Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="13-ode-theory-eng.html">13. Fundamental Theorum of ODEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-Bellman-Gronwall-lemma-eng.html">14. Bellman-Gronwall lemma</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">15. Dynamical systems</a></li>
 
 
 </ul>
@@ -267,7 +267,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap2-vector-matrix-operation/11-hermitian-matrices-eng.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/buzinguyen/linsys-intro/issues/new?title=Issue%20on%20page%20%2Fchap3-dynamical-systems/15-dynamical-systems-eng.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chap2-vector-matrix-operation/11-hermitian-matrices-eng.md" target="_blank"
+      <li><a href="../_sources/chap3-dynamical-systems/15-dynamical-systems-eng.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>11. Hermitian Matrices</h1>
+    <h1>15. Dynamical systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,11 +389,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-adjoint-maps">Self-adjoint maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hermitian matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unitary-matrices">Unitary matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-values">Singular values</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">15. Dynamical systems</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#axioms">Axioms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-axiom">State transition axiom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semigroup-axiom">Semigroup axiom</a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -404,58 +408,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="hermitian-matrices">
-<h1>11. Hermitian Matrices<a class="headerlink" href="#hermitian-matrices" title="Permalink to this headline">#</a></h1>
-<div class="contents local topic" id="contents">
+  <div class="tex2jax_ignore mathjax_ignore section" id="dynamical-systems">
+<h1>15. Dynamical systems<a class="headerlink" href="#dynamical-systems" title="Permalink to this headline">#</a></h1>
+<p>We will now formally define dynamical system, i.e, what does it mean to be a dynamical system, what elements are in a dynamical system, and as well some axioms that a dynamical system has to satisfy.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="definition">
+<h1>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h1>
+<p>A dynamical system <span class="math notranslate nohighlight">\(D(U, \Sigma, Y, s, r)\)</span> with:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#self-adjoint-maps" id="id2">Self-adjoint maps</a></p></li>
-<li><p><a class="reference internal" href="#id1" id="id3">Hermitian matrices</a></p></li>
-<li><p><a class="reference internal" href="#unitary-matrices" id="id4">Unitary matrices</a></p></li>
-<li><p><a class="reference internal" href="#singular-values" id="id5">Singular values</a></p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span>: input space. The input function <span class="math notranslate nohighlight">\(u(\cdot): T \rightarrow U = \mathbb{R}^{n_i}\)</span>, with <span class="math notranslate nohighlight">\(n_i\)</span> the dimension of the input.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Sigma\)</span>: state space. Function <span class="math notranslate nohighlight">\(x(\cdot): T \rightarrow \Sigma: \mathbb{R}^n\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Y\)</span>: output space. Output function <span class="math notranslate nohighlight">\(y(\cdot): T \rightarrow Y = \mathbb{R}^{n_o}\)</span> with <span class="math notranslate nohighlight">\(n_o\)</span> the dimension of the output.</p></li>
+<li><p><span class="math notranslate nohighlight">\(s\)</span>: state transition function, defines as <span class="math notranslate nohighlight">\(s(\cdot, \cdot, \cdot, \cdot): T \times T \times \Sigma \times U \rightarrow \Sigma\)</span>. An example is <span class="math notranslate nohighlight">\(x(t) = s(t, t_0, x_0, u(\cdot))\Big|_{t_0}^t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r\)</span>: read-out map (output map), defines as <span class="math notranslate nohighlight">\(r(t, x(t), u(t))\rightarrow y(t)\)</span>.
+With <span class="math notranslate nohighlight">\(T\)</span> be the set of time, it can either be <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> or <span class="math notranslate nohighlight">\(\{nT\}, n \in \mathbb{Z}\)</span>.</p></li>
 </ul>
 </div>
-<p>We now know the definition of adjoints. Let’s now look at self-adjoint maps</p>
-<div class="section" id="self-adjoint-maps">
-<h2><a class="toc-backref" href="#id2">Self-adjoint maps</a><a class="headerlink" href="#self-adjoint-maps" title="Permalink to this headline">#</a></h2>
-<p>Consider <span class="math notranslate nohighlight">\((H, \mathbb{F}, \langle\cdot,\cdot\rangle _H)\)</span>. Consider linear and continuous map <span class="math notranslate nohighlight">\(\mathcal{A}:H \rightarrow H\)</span>. Meaning that <span class="math notranslate nohighlight">\(\mathcal{A}^*:H\rightarrow H\)</span>. <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is self-adjoint if <span class="math notranslate nohighlight">\(\mathcal{A} = \mathcal{A}^*\)</span>. This also means that:</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="axioms">
+<h1>Axioms<a class="headerlink" href="#axioms" title="Permalink to this headline">#</a></h1>
+<div class="section" id="state-transition-axiom">
+<h2>State transition axiom<a class="headerlink" href="#state-transition-axiom" title="Permalink to this headline">#</a></h2>
+<p>If the inputs are the same over a time interval, and we start at the same state, then the state transition function will give us the same result at the end of that time interval.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+	u(t) &amp;= \tilde{u}(t) \quad \text{over} \quad [t_0, t_1] \\
+	\text{then} &amp; s(t, t_0, x_0, u) = s(t, t_0, x_0, \tilde{u})
+\end{align*}
+\end{split}\]</div>
+<p>What is substantial about this is that we do not care what happen before and after the chosen time interval. We can think of it as at <span class="math notranslate nohighlight">\(t_0\)</span>, whatever happened before has already been encapsulated into <span class="math notranslate nohighlight">\(x_0\)</span>, regardless of the previous control sequences, and if <span class="math notranslate nohighlight">\(u = \bar{u}\)</span> over <span class="math notranslate nohighlight">\([t_0, t_1]\)</span>, then the state transition function will go through the same sequence of states.</p>
+</div>
+<div class="section" id="semigroup-axiom">
+<h2>Semigroup axiom<a class="headerlink" href="#semigroup-axiom" title="Permalink to this headline">#</a></h2>
+<p>Given <span class="math notranslate nohighlight">\(t^* \in [t_0, t_1]\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-\langle x, \mathcal{A}y \rangle = \langle \mathcal{A}x, y \rangle \; \forall x,y \in H
+s(t_1, t_0, x_0, u) = s(t_1, t^*, s(t^*, t_0, x_0, u), u)
 \]</div>
-</div>
-<div class="section" id="id1">
-<h2><a class="toc-backref" href="#id3">Hermitian matrices</a><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(\mathcal{A} \simeq A = (a_{ij}), i, j \in 1\dots n\)</span>, with <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> the operator (map) and <span class="math notranslate nohighlight">\(A\)</span> the matrix representation <span class="math notranslate nohighlight">\(\in \mathbb{F}^{n\times n}\)</span>.</p>
-<p>The map <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is self-adjoint iff <span class="math notranslate nohighlight">\(A\)</span> is hermitian, i.e. <span class="math notranslate nohighlight">\(A = A^*\)</span>. The <span class="math notranslate nohighlight">\(A^*\)</span> in matrix means complex conjugate transpose, i.e. \bar{a_{ji}}$.</p>
-<div class="note admonition">
-<p class="admonition-title">Remark</p>
-<p>Hermitian matrices always have real eigenvalues.</p>
-</div>
-</div>
-<div class="section" id="unitary-matrices">
-<h2><a class="toc-backref" href="#id4">Unitary matrices</a><a class="headerlink" href="#unitary-matrices" title="Permalink to this headline">#</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Definition: Unitary matrix</p>
-<p>A matrix <span class="math notranslate nohighlight">\(U\)</span> is unitary iff</p>
-<div class="math notranslate nohighlight">
-\[
-U^*U = UU^* = I
-\]</div>
-</div>
-</div>
-<div class="section" id="singular-values">
-<h2><a class="toc-backref" href="#id5">Singular values</a><a class="headerlink" href="#singular-values" title="Permalink to this headline">#</a></h2>
-<p>Let us have the matrix <span class="math notranslate nohighlight">\(A \in \mathbb{C}^{m\times n}\)</span>. We will have <span class="math notranslate nohighlight">\(AA^* \in \mathbb{C}^{m\times m}\)</span> a square matrix. Let <span class="math notranslate nohighlight">\(\lambda_i , i=1\dots m\)</span> be the <em>eigenvalues</em> of <span class="math notranslate nohighlight">\(AA^*\)</span>. This also means that <span class="math notranslate nohighlight">\(\lambda_i\)</span> is real and non-negative.</p>
-<p>If we have <span class="math notranslate nohighlight">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_r \dots \ge \lambda_m\)</span>. If <span class="math notranslate nohighlight">\(r = \text{rank}(A) = \text{rank}(AA^*)\)</span>, then <span class="math notranslate nohighlight">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_r \ge 0\)</span> and all the remaining eigenvalues are all zeros.</p>
-<p>We define the <strong>singular values</strong> of the matrix to be the square root of the eigenvalues.</p>
-<div class="important admonition">
-<p class="admonition-title">Definition: Singular values</p>
-<p>The non-zero singular values of A are</p>
-<div class="math notranslate nohighlight">
-\[
-\lambda_i^\frac{1}{2}, i = 1\dots r
-\]</div>
-</div>
 </div>
 </div>
 
@@ -472,7 +461,7 @@ U^*U = UU^* = I
         },
         kernelOptions: {
             name: "python3",
-            path: "./chap2-vector-matrix-operation"
+            path: "./chap3-dynamical-systems"
         },
         predefinedOutput: true
     }
@@ -488,20 +477,20 @@ U^*U = UU^* = I
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="10-adjoints-eng.html"
+       href="14-Bellman-Gronwall-lemma-eng.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">10. Adjoints</p>
+        <p class="prev-next-title">14. Bellman-Gronwall lemma</p>
       </div>
     </a>
     <a class="right-next"
-       href="12-singular-value-decomposition-eng.html"
+       href="../notes/feedback-control-eng.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">12. Singular Value Decomposition</p>
+        <p class="prev-next-title">Notes on feedback control</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -520,11 +509,15 @@ U^*U = UU^* = I
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-adjoint-maps">Self-adjoint maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hermitian matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unitary-matrices">Unitary matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-values">Singular values</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">15. Dynamical systems</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#axioms">Axioms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-axiom">State transition axiom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semigroup-axiom">Semigroup axiom</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
