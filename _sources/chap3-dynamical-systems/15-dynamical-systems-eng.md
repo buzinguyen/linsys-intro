@@ -14,13 +14,14 @@ A dynamical system $D(U, \Sigma, Y, s, r)$ with:
 With $T$ be the set of time, it can either be $\mathbb{R}_+$ or $\{nT\}, n \in \mathbb{Z}$.
 
 # Axioms
+If a system satisfies the following axioms, then it is a dynamical system.
 ## State transition axiom
 If the inputs are the same over a time interval, and we start at the same state, then the state transition function will give us the same result at the end of that time interval.
 
 $$
 \begin{align*}
 	u(t) &= \tilde{u}(t) \quad \text{over} \quad [t_0, t_1] \\
-	\text{then} & s(t, t_0, x_0, u) = s(t, t_0, x_0, \tilde{u})
+	\text{then} \quad & s(t, t_0, x_0, u) = s(t, t_0, x_0, \tilde{u})
 \end{align*}
 $$
 

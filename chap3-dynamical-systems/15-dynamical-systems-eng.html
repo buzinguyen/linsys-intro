@@ -426,6 +426,7 @@ With <span class="math notranslate nohighlight">\(T\)</span> be the set of time,
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="axioms">
 <h1>Axioms<a class="headerlink" href="#axioms" title="Permalink to this headline">#</a></h1>
+<p>If a system satisfies the following axioms, then it is a dynamical system.</p>
 <div class="section" id="state-transition-axiom">
 <h2>State transition axiom<a class="headerlink" href="#state-transition-axiom" title="Permalink to this headline">#</a></h2>
 <p>If the inputs are the same over a time interval, and we start at the same state, then the state transition function will give us the same result at the end of that time interval.</p>
@@ -433,7 +434,7 @@ With <span class="math notranslate nohighlight">\(T\)</span> be the set of time,
 \[\begin{split}
 \begin{align*}
 	u(t) &amp;= \tilde{u}(t) \quad \text{over} \quad [t_0, t_1] \\
-	\text{then} &amp; s(t, t_0, x_0, u) = s(t, t_0, x_0, \tilde{u})
+	\text{then} \quad &amp; s(t, t_0, x_0, u) = s(t, t_0, x_0, \tilde{u})
 \end{align*}
 \end{split}\]</div>
 <p>What is substantial about this is that we do not care what happen before and after the chosen time interval. We can think of it as at <span class="math notranslate nohighlight">\(t_0\)</span>, whatever happened before has already been encapsulated into <span class="math notranslate nohighlight">\(x_0\)</span>, regardless of the previous control sequences, and if <span class="math notranslate nohighlight">\(u = \bar{u}\)</span> over <span class="math notranslate nohighlight">\([t_0, t_1]\)</span>, then the state transition function will go through the same sequence of states.</p>
