@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bellman-Gronwall lemma &#8212; Introduction to Linear Systems</title>
+    <title>14. Bellman-Gronwall lemma &#8212; Introduction to Linear Systems</title>
   
   
   
@@ -59,10 +59,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chap3-dynamical-systems/14-Bellman-Gronwall-lemma-eng';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Notes on feedback control" href="../notes/feedback-control-eng.html" />
+    <link rel="next" title="15. Dynamical systems" href="15-dynamical-systems-eng.html" />
     <link rel="prev" title="13. Fundamental Theorum of ODEs" href="13-ode-theory-eng.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -183,7 +185,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="00-intro-eng.html">Chapter 3: Dynamical Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="13-ode-theory-eng.html">13. Fundamental Theorum of ODEs</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bellman-Gronwall lemma</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">14. Bellman-Gronwall lemma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-dynamical-systems-eng.html">15. Dynamical systems</a></li>
+
+
 </ul>
 </li>
 </ul>
@@ -374,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Bellman-Gronwall lemma</h1>
+    <h1>14. Bellman-Gronwall lemma</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,8 +391,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Bellman-Gronwall lemma</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machinery">Machinery</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof">Proof</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-bellman-gronwall-lemma-in-proof-of-uniqueness-of-solution-to-differential-equation">Using Bellman-Gronwall lemma in proof of uniqueness of solution to differential equation</a></li>
 </ul>
             </nav>
         </div>
@@ -400,13 +405,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="bellman-gronwall-lemma">
-<h1>Bellman-Gronwall lemma<a class="headerlink" href="#bellman-gronwall-lemma" title="Permalink to this headline">#</a></h1>
+<h1>14. Bellman-Gronwall lemma<a class="headerlink" href="#bellman-gronwall-lemma" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#introduction" id="id2">Introduction</a></p></li>
 <li><p><a class="reference internal" href="#id1" id="id3">Bellman-Gronwall lemma</a></p></li>
-<li><p><a class="reference internal" href="#machinery" id="id4">Machinery</a></p></li>
-<li><p><a class="reference internal" href="#proof" id="id5">Proof</a></p></li>
+<li><p><a class="reference internal" href="#proof" id="id4">Proof</a></p></li>
+<li><p><a class="reference internal" href="#using-bellman-gronwall-lemma-in-proof-of-uniqueness-of-solution-to-differential-equation" id="id5">Using Bellman-Gronwall lemma in proof of uniqueness of solution to differential equation</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -415,12 +420,64 @@ document.write(`
 </div>
 <div class="section" id="id1">
 <h2><a class="toc-backref" href="#id3">Bellman-Gronwall lemma</a><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Suppose we have function <span class="math notranslate nohighlight">\(u(\cdot), K(\cdot)\)</span> that are real-valued, <span class="math notranslate nohighlight">\(PC\)</span> and positive on <span class="math notranslate nohighlight">\(R_+\)</span>. Let us also have some constant <span class="math notranslate nohighlight">\(c_1 \ge 0, t_0 \ge 0\)</span>, the Bellman-Gronwall states the following:</p>
+<div class="important admonition">
+<p class="admonition-title">Bellman-Gronwall lemma</p>
+<p>If <span class="math notranslate nohighlight">\(u(t) \le c_1 + \int_{t_0}^t K(\tau)u(\tau)d\tau\)</span> then:</p>
+<div class="math notranslate nohighlight">
+\[
+    u(t) \le c_1 e^{\int_{t_0}^t K(\tau)d\tau}
+\]</div>
 </div>
-<div class="section" id="machinery">
-<h2><a class="toc-backref" href="#id4">Machinery</a><a class="headerlink" href="#machinery" title="Permalink to this headline">#</a></h2>
+<p>It’s worth noticing that in the resulting inequality, <span class="math notranslate nohighlight">\(u(t)\)</span> only appears on the left hand side.</p>
 </div>
 <div class="section" id="proof">
-<h2><a class="toc-backref" href="#id5">Proof</a><a class="headerlink" href="#proof" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Proof</a><a class="headerlink" href="#proof" title="Permalink to this headline">#</a></h2>
+<p>Denotes <span class="math notranslate nohighlight">\(U(t) = c_1 + \int_{t_0}^t K(\tau)u(\tau)d\tau\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+u(t) \le U(t)
+\]</div>
+<p>Multiply both sides by the function <span class="math notranslate nohighlight">\(K(t)e^{-\int_{t_0}^t K(\tau)d\tau} \ge 0\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+u(t)K(t)e^{-\int_{t_0}^t K(\tau)d\tau} \le U(t)K(t)e^{-\int_{t_0}^t K(\tau)d\tau}
+\]</div>
+<p>proof continue: <a class="reference external" href="https://people.math.wisc.edu/~jwrobbin/angelic/gronwall.pdf">https://people.math.wisc.edu/~jwrobbin/angelic/gronwall.pdf</a></p>
+</div>
+<div class="section" id="using-bellman-gronwall-lemma-in-proof-of-uniqueness-of-solution-to-differential-equation">
+<h2><a class="toc-backref" href="#id5">Using Bellman-Gronwall lemma in proof of uniqueness of solution to differential equation</a><a class="headerlink" href="#using-bellman-gronwall-lemma-in-proof-of-uniqueness-of-solution-to-differential-equation" title="Permalink to this headline">#</a></h2>
+<p>Suppose we have <span class="math notranslate nohighlight">\(\dot{x} = f(x, t)\)</span>,  <span class="math notranslate nohighlight">\(x(t_0) = x_0\)</span> with solution <span class="math notranslate nohighlight">\(\phi(t)\)</span>. <em>How do we know that there is no other solution?</em> One way to prove this is to assume that it is not unique, and the find a contradiction.</p>
+<div class="note admonition">
+<p class="admonition-title">Proving uniqueness</p>
+<p>In proving uniqueness, we often do contradiction.</p>
+</div>
+<p>Assume that <span class="math notranslate nohighlight">\(\phi(t)\)</span> is not the unique solution, let us have <span class="math notranslate nohighlight">\(\chi(t)\)</span> also the solution. We know that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+	\dot{\phi}(t) &amp;= f(\phi, t), \quad \phi(t_0) = x_0 \rightarrow \phi(t) = x_0 + \int_{t_0}^t f(\phi, t)dt\\
+	\dot{\chi}(t) &amp;= f(\chi, t), \quad \chi(t_0) = x_0 \rightarrow \chi(t) = x_0 + \int_{t_0}^t f(\chi, t)dt\\
+\end{align*}
+\end{split}\]</div>
+<p>If we take the difference between these two solutions:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+	||\phi(t) - \chi(t)|| \le \int_{t_0}^t ||f(\phi, \tau) - f(\chi, \tau)|| d\tau
+\end{align*}
+\]</div>
+<p>Because <span class="math notranslate nohighlight">\(f(\cdot)\)</span> is Lipschitz  continuous, there there exists a PC function <span class="math notranslate nohighlight">\(K(\cdot)\)</span> such that <span class="math notranslate nohighlight">\(||f(x_1) - f(x_2)|| \le K(t)||x_1 - x_2||\)</span>. Also because <span class="math notranslate nohighlight">\(K(\cdot)\)</span> is PC, there exists a supremum value of <span class="math notranslate nohighlight">\(K(\cdot)\)</span> called <span class="math notranslate nohighlight">\(\bar{K}\)</span>. Then we have:</p>
+<div class="math notranslate nohighlight">
+\[
+||\phi(t) - \chi(t)|| \le \bar{K} \int_{t_0}^t||\phi(\tau) - \chi(\tau)|| d\tau
+\]</div>
+<p>Now this looks like the form that we can use the Bellman-Gronwall lemma on. For this, we will have <span class="math notranslate nohighlight">\(c_1=0\)</span>, and so with Bellman-Gronwall lemma, we can further bound this to:</p>
+<div class="math notranslate nohighlight">
+\[
+||\phi(t) - \chi(t)|| \le \bar{K} \int_{t_0}^t||\phi(\tau) - \chi(\tau)|| d\tau \rightarrow c_1 e^{\int_{t_0}^t \bar{K} d\tau} = 0
+\]</div>
+<p>Then we conclude that <span class="math notranslate nohighlight">\(\phi(t) = \chi(t)\)</span>.</p>
 </div>
 </div>
 
@@ -462,11 +519,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../notes/feedback-control-eng.html"
+       href="15-dynamical-systems-eng.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notes on feedback control</p>
+        <p class="prev-next-title">15. Dynamical systems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -487,8 +544,8 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Bellman-Gronwall lemma</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machinery">Machinery</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof">Proof</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-bellman-gronwall-lemma-in-proof-of-uniqueness-of-solution-to-differential-equation">Using Bellman-Gronwall lemma in proof of uniqueness of solution to differential equation</a></li>
 </ul>
   </nav></div>
 

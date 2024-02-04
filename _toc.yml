@@ -32,6 +32,7 @@ parts:
       sections:
       - file: chap3-dynamical-systems/13-ode-theory-eng
       - file: chap3-dynamical-systems/14-Bellman-Gronwall-lemma-eng
+      - file: chap3-dynamical-systems/15-dynamical-systems-eng
   - caption: Notes
     chapters:
     - file: notes/feedback-control-eng
